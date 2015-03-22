@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    title Atheist Childrens' Books
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  each val in styles
+    link(rel='stylesheet', href=val)      
+  body
+    div.stage
+      header
+        div.logo
+          h1
+            img(class='atheist', src='/img/atheist.png', alt='atheist')
+            img(class='childrens', src='/img/childrens.png', alt='childrens')
+            img(class='books', src='/img/books.png', alt='books')
+          div.cloud
+            img(class='cloud', src='/img/cloud.png', alt='cloud')
+          div.sun
+            ul
+              li
+                img(class='centre', src='/img/sun-centre.png', alt='sun')
+              li
+                img(class='rays', src='/img/sun-rays.png', alt='sun rays')
+        nav
+      main#main.view-animate-container
+      footer
+    if vendor
+      each val in vendor
+        script(src=val, type='text/javascript')
+    each val in scripts.body
+      script(src=val, type='text/javascript')

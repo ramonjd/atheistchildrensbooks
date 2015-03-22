@@ -1,0 +1,16 @@
+{
+  "vendor" : [
+    "bower_components/jquery/dist/jquery.js"
+  ],
+  "scripts" : {
+    "head" : [
+      "bower_components/components-modernizr/modernizr.js"
+    ],
+    "body" : [
+      ".tmp/js/app.js"
+    ]
+  },
+  "styles" : [
+    "/css/base.css"
+  ]
+}

@@ -1,0 +1,187 @@
+* {
+  margin:0;
+  padding:0;
+  outline:0;
+  border:0;
+}
+::-webkit-scrollbar {
+    height: 12px;
+    width: 9px;
+    background: 0 0;
+    border-radius: 20px
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f03252;
+    border: 3px solid #232323;
+    border-radius: 20px
+}
+
+::selection {
+    background: #f03252
+}
+
+::-moz-selection {
+    background: #f03252
+}
+
+body,html {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: #d1d1d1;
+    font-size: 10px;
+    line-height: 1.1em;
+    letter-spacing: .03em;
+    margin: 0;
+    overflow: hidden;
+    background-color: #aae8f0;
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    transition: background .5s;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+header, main, footer, section, article {
+  display: block;
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+.stage {
+      height: 100%;
+    width: 100%;
+    background-color: #35CAE8;
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    transition: background .5s;
+    overflow: hidden;
+  &::before {
+    content: "";
+    opacity: .34;
+    -webkit-transition: .23s;
+    -moz-transition: .23s;
+    transition: .23s;
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+  
+    
+  }
+}
+.logo {
+  position:relative;
+  width:700px;
+  
+  h1 {
+    img {
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:11;
+      &.atheist {
+        top: 57px;
+        left: 93px;
+      }
+      &.childrens {
+        top: 106px;
+        left: 142px;      
+      }
+      &.books {
+        top: 199px;
+        left: 214px;     
+      }
+    }
+  }
+  
+  .cloud {
+    position:absolute;
+    z-index:9;
+    top:0;
+    left:0;
+  }
+  
+  .sun {
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:10;
+    ul {
+      position:relative;
+      img {
+        position:absolute;
+        top:0;
+        left:0;
+        &.centre {
+          top: 60px;
+          left: 63px;
+        }
+        &.rays {
+          -webkit-animation: ray-rotation 5s infinite linear;
+          -moz-animation: ray-rotation 5s infinite linear;
+          animation: ray-rotation 5s infinite linear;
+          -webkit-transition: .18s;
+          -moz-transition: .18s;
+          transition: .18s;
+          -webkit-transform-origin: 50% 50%;
+          -moz-transform-origin: 50% 50%;
+          -ms-transform-origin: 50% 50%;
+          -o-transform-origin: 50% 50%;
+          transform-origin: 50% 50%          
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes ray-rotation {
+   from{
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes ray-rotation {
+   from{
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes ray-rotation {
+  
+   from{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg)    
+    }  
+}
