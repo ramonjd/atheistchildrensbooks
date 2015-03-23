@@ -27,6 +27,15 @@ html(lang='en')
                 img(class='rays', src='/img/sun-rays.png', alt='sun rays')
         nav
       main#main.view-animate-container
+        div.arrow.left
+          img(src='/img/left-arrow.png', alt='left arrow')
+          a(href='#')
+            span That way
+          
+        div.arrow.right
+          img(src='/img/right-arrow.png', alt='right arrow')
+          a(href='#')
+            span This way  
       footer
     if vendor
       each val in vendor

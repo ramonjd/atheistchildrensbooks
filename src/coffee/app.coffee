@@ -1,6 +1,28 @@
-((win, doc) ->->
+((win, doc, $) ->
   $body = undefined
+  $logoImgs = $ '.logo h1 > img'
+  $arrows = $ '.arrow'
+  $cloud = $ '.cloud'
   preloaderTimeout = 1000
+  
+  
+  animateLogo = ->
+    setTimeout ()->
+      $logoImgs.toggleClass 'zoomInDown animated'
+    , 750
+    $cloud.toggleClass 'bounceIn animated'
+    return
+    
+  
+  attachEvents = ->
+    $arrows.mouseenter ()->
+      $(this).toggleClass 'shake animated'
+      $arrows.one 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', (e)->
+        $(e.target).removeClass 'shake animated'
+        return
+      return
+    return
+  
   
   preLoader = ->
     imgs = [
@@ -32,9 +54,15 @@
     $.when.apply($, a).done ->
       setTimeout (->
         #startup
+        animateLogo()
+        attachEvents()
         return
       ), preloaderTimeout
       return
     return
+  
+
+  preLoader()
   return
-) windwow, document
+  
+) window, document, jQuery
