@@ -1,9 +1,10 @@
 ((win, doc, $) ->
   $body = undefined
+  swiper = undefined
   $logoImgs = $ '.logo h1 > img'
   $arrows = $ '.arrow'
   $cloud = $ '.cloud'
-  preloaderTimeout = 1000
+  preloaderTimeout = 1
   
   
   animateLogo = ->
@@ -23,9 +24,16 @@
       return
     return
   
+  setupSwiper = ->
+    swiper = new Swiper '.swiper-container', {
+      nextButton: '.swiper-button-next'
+      prevButton: '.swiper-button-prev'
+    }
   
   preLoader = ->
     imgs = [
+      '/img/question.png'
+      '/img/balloon.png'
       '/img/cloud.png'
       '/img/sun-rays.png'
       '/img/sun-centre.png'

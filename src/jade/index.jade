@@ -20,23 +20,41 @@ html(lang='en')
           div.cloud
             img(class='cloud', src='/img/cloud.png', alt='cloud')
           div.sun
-            ul
-              li
+            div.wrapper
                 img(class='centre', src='/img/sun-centre.png', alt='sun')
-              li
-                img(class='rays', src='/img/sun-rays.png', alt='sun rays')
-        nav
-      main#main.view-animate-container
-        div.arrow.left
+                img(class='rays', src='/img/sun-rays.png', alt='sun rays')              
+        div.questions-corner
+          div.wrapper
+            img(class='balloon', src='/img/balloon.png', alt='balloon')
+            img(class='question', src='/img/question.png', alt='question')
+      main#main.swiper-container
+        div.swiper-wrapper
+          div.swiper-slide
+            h2 one
+          div.swiper-slide
+            h2 two
+          div.swiper-slide
+            h3 three
+        div.arrow.left.swiper-button-previous
           img(src='/img/left-arrow.png', alt='left arrow')
           a(href='#')
             span That way
           
-        div.arrow.right
+        div.arrow.right.swiper-button-next
           img(src='/img/right-arrow.png', alt='right arrow')
           a(href='#')
             span This way  
-      footer
+    footer
+      nav
+        ul
+          li
+            a(href='#') home            
+          li
+            a(href='#') read
+          li
+            a(href='#') learn
+          li
+            a(href='#') say hi
     if vendor
       each val in vendor
         script(src=val, type='text/javascript')

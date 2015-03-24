@@ -1,6 +1,7 @@
 {
   "vendor" : [
-    "bower_components/jquery/dist/jquery.js"
+    "bower_components/jquery/dist/jquery.js",
+    "bower_components/swiper/dist/js/swiper.jquery.js"
   ],
   "scripts" : {
     "head" : [
@@ -11,6 +12,7 @@
     ]
   },
   "styles" : [
+    "bower_components/swiper/dist/css/swiper.css",
     "/css/base.css"
   ]
 }
