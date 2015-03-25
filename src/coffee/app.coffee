@@ -4,6 +4,8 @@
   $logoImgs = $ '.logo h1 > img'
   $arrows = $ '.arrow'
   $cloud = $ '.cloud'
+  $footerLinks = $ 'footer nav a'
+  animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
   preloaderTimeout = 1
   
   
@@ -18,8 +20,14 @@
   attachEvents = ->
     $arrows.mouseenter ()->
       $(this).toggleClass 'shake animated'
-      $arrows.one 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', (e)->
+      $arrows.one animationEnd, (e)->
         $(e.target).removeClass 'shake animated'
+        return
+      return
+    $footerLinks.mouseenter ()->
+      $(this).toggleClass 'rubberBand animated'
+      $footerLinks.one animationEnd, (e)->
+        $(e.target).removeClass 'rubberBand animated'
         return
       return
     return
@@ -32,6 +40,9 @@
   
   preLoader = ->
     imgs = [
+      '/img/close-x.png'
+      '/img/close.png'
+      '/img/grass.png'
       '/img/question.png'
       '/img/balloon.png'
       '/img/cloud.png'
@@ -64,6 +75,7 @@
         #startup
         animateLogo()
         attachEvents()
+        setupSwiper()
         return
       ), preloaderTimeout
       return

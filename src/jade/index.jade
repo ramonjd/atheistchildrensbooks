@@ -22,7 +22,9 @@ html(lang='en')
           div.sun
             div.wrapper
                 img(class='centre', src='/img/sun-centre.png', alt='sun')
-                img(class='rays', src='/img/sun-rays.png', alt='sun rays')              
+                img(class='rays', src='/img/sun-rays.png', alt='sun rays')
+          div.bg-clouds
+            img(src='/img/bg-clouds.png', alt='clouds')
         div.questions-corner
           div.wrapper
             img(class='balloon', src='/img/balloon.png', alt='balloon')
@@ -30,12 +32,15 @@ html(lang='en')
       main#main.swiper-container
         div.swiper-wrapper
           div.swiper-slide
-            h2 one
+            div.swiper-slide-wrapper
+              h2 one
           div.swiper-slide
-            h2 two
+            div.swiper-slide-wrapper
+              h2 two
           div.swiper-slide
-            h3 three
-        div.arrow.left.swiper-button-previous
+            div.swiper-slide-wrapper
+              h3 three
+        div.arrow.left.swiper-button-prev
           img(src='/img/left-arrow.png', alt='left arrow')
           a(href='#')
             span That way
