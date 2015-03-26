@@ -1,18 +1,32 @@
 ((win, doc, $) ->
-  $body = undefined
+  $body = $ 'body'
   swiper = undefined
   $logoImgs = $ '.logo h1 > img'
   $arrows = $ '.arrow'
+  $sun = $ '.sun'
   $cloud = $ '.cloud'
+  $clouds = $ '.bg-clouds'
+  $balloon = $ '.questions-corner'
   $footerLinks = $ 'footer nav a'
+  $close = $ '.close'
+  $overlay = $ '.overlay'
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
   preloaderTimeout = 1
+  
   
   
   animateLogo = ->
     setTimeout ()->
       $logoImgs.toggleClass 'zoomInDown animated'
+      $sun.toggleClass 'bounceIn animated'
+      setTimeout ()->
+        $balloon.toggleClass 'lightSpeedIn animated'
+        $body.addClass 'loaded'
+      , 250
     , 750
+    setTimeout ()->
+      $clouds.toggleClass 'bounceIn animated'
+    , 250
     $cloud.toggleClass 'bounceIn animated'
     return
     
@@ -30,6 +44,12 @@
         $(e.target).removeClass 'rubberBand animated'
         return
       return
+    $close.click ()->
+      $overlay.removeClass 'bounceIn animated'
+      $overlay.removeClass 'show'
+    $balloon.click ()->
+      $overlay.addClass 'show'
+      $overlay.addClass 'bounceIn animated'
     return
   
   setupSwiper = ->
