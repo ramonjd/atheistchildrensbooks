@@ -153,12 +153,12 @@ footer {
       width:50%;
       
       &.atheist {
-   top: 33px;
-  left: 62px;
+        top: 33px;
+        left: 62px;
       }
       &.childrens {
-     top: 75px;
-  left: 94px;
+        top: 75px;
+        left: 94px;
       }
       &.books {
        top: 132px;
@@ -183,8 +183,8 @@ footer {
   .sun {
     position: absolute;
     opacity: 0;
-  top: 113px;
-  left: 292px;
+    top: 113px;
+    left: 292px;
     z-index: 8;
     width: 170px;
     -webkit-transition: all .25s ease-out;  
@@ -195,9 +195,9 @@ footer {
       top: 0;
       left: 0;
       &.centre {
-  top: 33px;
-  left: 36px;
-  width: 90px;
+      top: 33px;
+      left: 36px;
+      width: 90px;
       }
       &.rays {
         -webkit-animation: ray-rotation 30s infinite linear;
@@ -226,8 +226,8 @@ footer {
   position: absolute;
   top: 0;
   right: 0;
-  cursor: pointer;
-height: 224px;
+  cursor: help;
+  height: 224px;
   width: 175px;
   z-index: 12;
   overflow: hidden;
@@ -341,7 +341,8 @@ height: 224px;
       height: 100%;
       width: 100%;     
       font-size:5rem;
-     display:table;
+      display:table;
+     position:relative;
      .swiper-slide-wrapper {
        display: table-cell;
        text-align: center;
@@ -352,6 +353,25 @@ height: 224px;
     background: 0;
   }
 }
+
+.cow {
+    width: 320px;
+    height: 240px;
+    background-image: url('/img/cow.png');
+    position:absolute;
+    bottom:75px;
+    right:80px;
+  cursor:pointer;
+  
+}
+
+.cow:hover {
+  -webkit-animation: chew 1s steps(6) infinite;
+  -moz-animation: chew 1s steps(6) infinite;
+  -ms-animation: chew 1s steps(6) infinite;
+  -o-animation: chew 1s steps(6) infinite;
+}
+
 // animations
 .animated {
   -webkit-animation-duration: 1s;
@@ -367,6 +387,31 @@ height: 224px;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
+
+@-webkit-keyframes chew {
+   from { background-position:    0px; }
+     to { background-position: -1920px; }
+}
+
+@-moz-keyframes chew {
+   from { background-position:    0px; }
+     to { background-position: 1920px; }
+}
+
+@-ms-keyframes chew {
+   from { background-position:  1920px; }
+}
+
+@-o-keyframes chew {
+   from { background-position:    0px; }
+     to { background-position: -1920px; }
+}
+
+@keyframes chew {
+   from { background-position:    0px; }
+     to { background-position: 1920px; }
+}
+
 @-webkit-keyframes ray-rotation {
   from {
     -webkit-transform: rotate(0deg);

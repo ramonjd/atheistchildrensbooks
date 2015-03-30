@@ -60,6 +60,7 @@
   
   preLoader = ->
     imgs = [
+      '/img/cow.png'
       '/img/close-x.png'
       '/img/close.png'
       '/img/grass.png'
