@@ -8,11 +8,14 @@
       "bower_components/components-modernizr/modernizr.js"
     ],
     "body" : [
-      ".tmp/js/app.js"
+      ".tmp/js/preloadImages.js",
+      ".tmp/js/acb.js",
+      ".tmp/js/pageSlide.js",
+      ".tmp/js/init.js"
     ]
   },
   "styles" : [
     "bower_components/swiper/dist/css/swiper.css",
-    "/css/base.css"
+    "/css/styles.css"
   ]
 }

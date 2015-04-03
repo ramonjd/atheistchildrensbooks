@@ -36,7 +36,7 @@ module.exports = (grunt)->
           middleware: (connect)->
             middlewares = [
               modRewrite([
-                '!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg$ /index.html [L]'
+                '!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.gif|\\.jpg$ /index.html [L]'
               ])
               mountFolder connect, './'
               mountFolder connect, '.tmp/'
@@ -81,12 +81,12 @@ module.exports = (grunt)->
     less:
       dev:
         files:
-          '.tmp/css/base.css' : 'src/less/base.less'
+          '.tmp/css/styles.css' : 'src/less/styles.less'
       dist:
         options:
           compress: true
         files:
-          'dist/css/base.min.css' : 'src/less/base.less'
+          'dist/css/styles.min.css' : 'src/less/styles.less'
     watch:
       html:
         files: 'src/jade/**/*.jade'
@@ -99,6 +99,20 @@ module.exports = (grunt)->
         tasks: ['less:dev']
     )
   
+  
+  #
+  # custom tasks
+  #
+  grunt.registerTask 'createImgJs', 'recurse through img dir', ()->
+    imgs = []
+    dest = '.tmp/js/preloaderAssets.js'
+    contents = 'acb.preloaderAssets=['
+    grunt.file.recurse 'src/img/', (abspath, rootdir, subdir, filename)->
+      imgs.push '\'/img/' + filename + '\''
+    contents += imgs + '];'
+    grunt.file.write dest, contents
+    console.log(dest + ' created')
+  
   #
   # load modules
   #
@@ -109,6 +123,7 @@ module.exports = (grunt)->
   #
   grunt.registerTask 'compile', [
     'clean:dev'
+    #'createImgJs'
     'less:dev'
     'coffee:dev'
     'copy:dev'

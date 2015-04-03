@@ -1,4 +1,4 @@
-((win, doc, $) ->
+acb.init = ((win, doc, $, pageSlide) ->
   $body = $ 'body'
   swiper = undefined
   $logoImgs = $ '.logo h1 > img'
@@ -10,18 +10,15 @@
   $footerLinks = $ 'footer nav a'
   $close = $ '.close'
   $overlay = $ '.overlay'
+  $loading = $ '.loading'
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
-  preloaderTimeout = 1
-  
-  
-  
+
   animateLogo = ->
     setTimeout ()->
       $logoImgs.toggleClass 'zoomInDown animated'
       $sun.toggleClass 'bounceIn animated'
       setTimeout ()->
         $balloon.toggleClass 'lightSpeedIn animated'
-        $body.addClass 'loaded'
       , 250
     , 750
     setTimeout ()->
@@ -29,8 +26,18 @@
     , 250
     $cloud.toggleClass 'bounceIn animated'
     return
-    
-  
+
+  finishLoading = ->
+    $loading.addClass 'loaded'
+    setTimeout ()->
+      $loading.addClass 'hide'
+      animateLogo()
+      setTimeout ()->
+        $body.addClass 'loaded'
+        $loading.removeClass 'loaded hide'
+      , 1250
+    , 750
+
   attachEvents = ->
     $arrows.mouseenter ()->
       $(this).toggleClass 'shake animated'
@@ -51,59 +58,18 @@
       $overlay.addClass 'show'
       $overlay.addClass 'bounceIn animated'
     return
-  
-  setupSwiper = ->
-    swiper = new Swiper '.swiper-container', {
-      nextButton: '.swiper-button-next'
-      prevButton: '.swiper-button-prev'
-    }
-  
-  preLoader = ->
-    imgs = [
-      '/img/cow.png'
-      '/img/close-x.png'
-      '/img/close.png'
-      '/img/grass.png'
-      '/img/question.png'
-      '/img/balloon.png'
-      '/img/cloud.png'
-      '/img/sun-rays.png'
-      '/img/sun-centre.png'
-      '/img/atheist.png'
-      '/img/childrens.png'
-      '/img/books.png'
-      '/img/bg-clouds.png'
-      '/img/star-1.png'
-      '/img/star-2.png'
-      '/img/star-3.png'
-      '/img/star-4.png'
-    ]
-    a = []
-    i = 0
-    while i < imgs.length
-      !((imgSrc, a) ->
-        img = new Image
 
-        img.onload = ->
-          a.resolve()
-          return
-        img.src = imgSrc
-        return
-      )(imgs[i], a[i] = $.Deferred())
-      i++
-    $.when.apply($, a).done ->
-      setTimeout (->
-        #startup
-        animateLogo()
-        attachEvents()
-        setupSwiper()
-        return
-      ), preloaderTimeout
+  # init app
+  attachEvents()
+  pageSlide.init()
+
+  # loading
+  $body.preloadImages {
+    onStep: ()->
       return
-    return
-  
+    onComplete: ()->
+      finishLoading()
+  }
 
-  preLoader()
   return
-  
-) window, document, jQuery
+) window, document, jQuery, acb.pageSlide

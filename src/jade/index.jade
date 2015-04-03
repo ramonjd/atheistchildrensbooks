@@ -7,7 +7,7 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
   each val in styles
     link(rel='stylesheet', href=val)      
-  body.loading
+  body
     div.stage
       header
         div.logo
@@ -31,15 +31,18 @@ html(lang='en')
             img(class='question', src='/img/question.png', alt='question')
       main#main.swiper-container
         div.swiper-wrapper
-          div.swiper-slide
+          div.swiper-slide(data-hash='home')
             div.swiper-slide-wrapper
-              h2 one
+              div.content-cell
+                h2 one
+              div.content-cell
+                h2 one
               div.cow
-          div.swiper-slide
+          div.swiper-slide(data-hash='read')
             div.swiper-slide-wrapper
               h2 two
           div.swiper-slide
-            div.swiper-slide-wrapper
+            div.swiper-slide-wrapper(data-hash='learn')
               h3 three
         div.arrow.left.swiper-button-prev
           img(src='/img/left-arrow.png', alt='left arrow')
@@ -52,23 +55,11 @@ html(lang='en')
           a(href='#')
             img(src='/img/this-way.png', alt='This way')
             span This way  
-    footer
-      nav
-        ul
-          li
-            a(href='#') home            
-          li
-            a(href='#') read
-          li
-            a(href='#') learn
-          li
-            a(href='#') say hi
-    div.overlay
-      div.wrapper
-        div.close
-          img(src='/img/close-x.png', alt='Close')
-          img(src='/img/close.png', alt='Close')
-          span Close
+
+    include ./modules/footer.jade
+    include ./modules/overlay.jade
+    include ./modules/loading.jade
+
     if vendor
       each val in vendor
         script(src=val, type='text/javascript')
