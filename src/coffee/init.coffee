@@ -1,6 +1,5 @@
-acb.init = ((win, doc, $, pageSlide) ->
+acb.init = (($, pageSlide) ->
   $body = $ 'body'
-  swiper = undefined
   $logoImgs = $ '.logo h1 > img'
   $arrows = $ '.arrow'
   $sun = $ '.sun'
@@ -72,4 +71,4 @@ acb.init = ((win, doc, $, pageSlide) ->
   }
 
   return
-) window, document, jQuery, acb.pageSlide
+) jQuery, acb.pageSlide

@@ -1,10 +1,14 @@
-acb.pageSlide = ((Swiper, $) ->
+acb.pageSlide = ((win, per, $) ->
   swiper = undefined
-  $navLinks = $ 'footer a'
+  $swiperContainer = $ '.swiper-container'
+  $win = $ win
+  $navLinks = $ 'nav a'
 
   setActiveSlide = (index)->
     $navLinks.removeClass('active').eq(index).addClass('active')
 
+  resizeContainer = ->
+    $swiperContainer.height $win.height()
 
   setupNavLinks = ->
     $navLinks.on 'click', (e)->
@@ -22,11 +26,16 @@ acb.pageSlide = ((Swiper, $) ->
       hashnav: true
       onSlideChangeEnd : (swiperObject)->
         setActiveSlide(swiperObject.activeIndex)
+
     }
     setupNavLinks()
+    resizeContainer()
+
+    $win.smartresize ()->
+      resizeContainer()
 
   return {
     init : setupSwiper
     swiper : swiper
   }
-) window.Swiper, jQuery
+) window, window.Swiper, jQuery

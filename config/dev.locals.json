@@ -9,6 +9,7 @@
     ],
     "body" : [
       ".tmp/js/preloadImages.js",
+      ".tmp/js/smartresize.js",
       ".tmp/js/acb.js",
       ".tmp/js/pageSlide.js",
       ".tmp/js/init.js"
