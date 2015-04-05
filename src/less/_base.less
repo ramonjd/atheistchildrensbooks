@@ -6,6 +6,7 @@
   background: 0 0;
   border-radius: 20px
   background:white;
+  z-index:1000;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -26,9 +27,6 @@ body,
 html {
   height: 100%;
   width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
   color: #333;
   line-height: 1.4;
   letter-spacing: .03em;
@@ -50,43 +48,16 @@ h1, h2, h3, h4, h5, nav {
 .stage {
   height: 100%;
   width: 100%;
-}
-main {
-}
-nav {
-  font-size: 3rem;
-  font-weight: 700;
-  li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    border-radius: 10px;
-    padding: 17px 10px 10px 10px;
-    background: rgba(255, 255, 255, 0.4);
-    &:hover,
-    &.active {
-      background: rgba(255, 255, 255, .9);
-    }
-  }
-}
-header {
-  nav {
-    position:absolute;
-    top:40px;
-    left:500px;
-    z-index:99;
-  }
+  overflow-x: hidden;
 }
 .logo {
   position: relative;
   cursor: pointer;
-  width: 500px;
+  width: 250px;
   float:left;
-
+  @media (min-width: @screen-md-min) {
+    width: 500px;
+  }
   img {
     width: 100%;
   }
@@ -103,19 +74,33 @@ header {
       top: 0;
       z-index: 11;
       opacity: 0;
-      width: 50%;
-
+      width: 70%;
+      @media (min-width: @screen-md-min) {
+        width: 50%;
+      }
       &.atheist {
-        top: 33px;
-        left: 62px;
+        top: -15px;
+        left: 6px;
+        @media (min-width: @screen-md-min) {
+          top: 33px;
+          left: 62px;
+        }
       }
       &.childrens {
-        top: 75px;
-        left: 94px;
+        top: 13px;
+        left: 34px;
+        @media (min-width: @screen-md-min) {
+          top: 75px;
+          left: 94px;
+        }
       }
       &.books {
-        top: 132px;
-        left: 132px;
+        top: 52px;
+        left: 64px;
+        @media (min-width: @screen-md-min) {
+          top: 132px;
+          left: 132px;
+        }
       }
     }
   }
@@ -136,21 +121,29 @@ header {
   .sun {
     position: absolute;
     opacity: 0;
-    top: 113px;
-    left: 292px;
+    top: 14px;
+    left: 127px;
     z-index: 8;
-    width: 170px;
-    -webkit-transition: all .25s ease-out;
-    -moz-transition: all .25s ease-out;
-    transition: all .25s ease-out;
+    width: 151px;
+    .transition(all .25s ease-out);
+    @media (min-width: @screen-md-min) {
+      width: 170px;
+      top: 113px;
+      left: 292px;
+    }
     img {
       position: absolute;
       top: 0;
       left: 0;
       &.centre {
-        top: 33px;
+        top: 34px;
         left: 36px;
-        width: 90px;
+        width: 76px;
+        @media (min-width: @screen-md-min) {
+          top: 33px;
+          left: 36px;
+          width: 90px;
+        }
       }
       &.rays {
         -webkit-animation: ray-rotation 30s infinite linear;
@@ -170,30 +163,34 @@ header {
 
   &:hover {
     .sun {
-      top: 130px;
-      left: 338px;
+      top: 50px;
+      left: 170px;
+      @media (min-width: @screen-md-min) {
+        top: 130px;
+        left: 338px;
+      }
     }
   }
 }
 
 .questions-corner {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  height: 224px;
-  width: 175px;
-  z-index: 12;
-  overflow: hidden;
-  opacity: 0;
+  display:none;
+  @media (min-width: @screen-md-min) {
+    display:block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    height: 224px;
+    width: 175px;
+    z-index: 12;
+    overflow: hidden;
+    opacity: 0;
+  }
   &:hover {
     .question {
-      -webkit-transform: scale(1.2);
-      -moz-transform: scale(1.2);
-      -o-transform: scale(1.2);
-      -webkit-transform: rotate(25deg);
-      -moz-transform: rotate(25deg);
-      -o-transform: rotate(25deg);
+      .scale(1.2);
+      .rotate(25)
     }
   }
   img {
@@ -201,19 +198,20 @@ header {
     top: 10px;
     right: 28px;
     &.question {
-      -webkit-transition: all .2s ease-in-out;
-      -moz-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
+      .transition(all .2s ease-in-out);
       width: 100px;
     }
     &.balloon {
       top: -30px;
-      right: -2px;
-      -moz-animation: 3s ease 0s normal none infinite swing;
-      -moz-transform-origin: center top;
-      -webkit-animation: swing 3s infinite ease-in-out;
-      -webkit-transform-origin: top;
+      right: -200px;
       width: 168px;
+      @media (min-width: @screen-md-min) {
+        right: -2px;
+        -moz-animation: 3s ease 0s normal none infinite swing;
+        -moz-transform-origin: center top;
+        -webkit-animation: swing 3s infinite ease-in-out;
+        -webkit-transform-origin: top;
+      }
     }
   }
 }

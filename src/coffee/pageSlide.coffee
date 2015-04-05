@@ -24,6 +24,7 @@ acb.pageSlide = ((win, per, $) ->
       nextButton: '.swiper-button-next'
       prevButton: '.swiper-button-prev'
       hashnav: true
+      setWrapperSize: true
       onSlideChangeEnd : (swiperObject)->
         setActiveSlide(swiperObject.activeIndex)
 
@@ -31,11 +32,9 @@ acb.pageSlide = ((win, per, $) ->
     setupNavLinks()
     resizeContainer()
 
-    $win.smartresize ()->
-      resizeContainer()
-
   return {
     init : setupSwiper
     swiper : swiper
+    resizeContainer : resizeContainer
   }
 ) window, window.Swiper, jQuery

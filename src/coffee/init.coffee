@@ -1,5 +1,7 @@
-acb.init = (($, pageSlide) ->
+acb.init = ((window, $, pageSlide) ->
   $body = $ 'body'
+  $win = $ window
+  $stage = $ '.stage'
   $logoImgs = $ '.logo h1 > img'
   $arrows = $ '.arrow'
   $sun = $ '.sun'
@@ -10,7 +12,9 @@ acb.init = (($, pageSlide) ->
   $close = $ '.close'
   $overlay = $ '.overlay'
   $loading = $ '.loading'
+  $menuTitle = $ '.menu-title'
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+  isMenuOpen = false
 
   animateLogo = ->
     setTimeout ()->
@@ -25,6 +29,17 @@ acb.init = (($, pageSlide) ->
     , 250
     $cloud.toggleClass 'bounceIn animated'
     return
+
+  toggleMenu = (state) ->
+    if state is false && isMenuOpen is false
+      return isMenuOpen
+    if isMenuOpen or state is false
+      $body.removeClass 'menu-open'
+      isMenuOpen = false
+    else
+      $body.addClass 'menu-open'
+      isMenuOpen = true
+    isMenuOpen
 
   finishLoading = ->
     $loading.addClass 'loaded'
@@ -50,17 +65,26 @@ acb.init = (($, pageSlide) ->
         $(e.target).removeClass 'rubberBand animated'
         return
       return
-    $close.click ()->
+    $close.on 'click', ()->
       $overlay.removeClass 'bounceIn animated'
       $overlay.removeClass 'show'
-    $balloon.click ()->
+    $balloon.on 'click', ()->
       $overlay.addClass 'show'
       $overlay.addClass 'bounceIn animated'
+    $menuTitle.on 'click', ()->
+      toggleMenu()
+    $stage.on 'click', (e)->
+      target = e.target
+      if isMenuOpen and target != $menuTitle[0]
+        toggleMenu()
     return
 
   # init app
   attachEvents()
   pageSlide.init()
+  $win.smartresize ()->
+    pageSlide.resizeContainer()
+    toggleMenu(false)
 
   # loading
   $body.preloadImages {
@@ -71,4 +95,4 @@ acb.init = (($, pageSlide) ->
   }
 
   return
-) jQuery, acb.pageSlide
+) window, jQuery, acb.pageSlide
