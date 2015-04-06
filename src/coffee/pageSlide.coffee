@@ -1,5 +1,6 @@
 acb.pageSlide = ((win, per, $) ->
   swiper = undefined
+  swiperV = undefined
   $swiperContainer = $ '.swiper-container'
   $win = $ win
   $navLinks = $ 'nav a'
@@ -8,7 +9,9 @@ acb.pageSlide = ((win, per, $) ->
     $navLinks.removeClass('active').eq(index).addClass('active')
 
   resizeContainer = ->
-    $swiperContainer.height $win.height()
+    h = $win.height();
+    if (h > 600)
+      $swiperContainer.height h
 
   setupNavLinks = ->
     $navLinks.on 'click', (e)->
@@ -20,14 +23,21 @@ acb.pageSlide = ((win, per, $) ->
         $this.addClass 'active'
 
   setupSwiper = ->
-    swiper = new Swiper '.swiper-container', {
+    swiper = new Swiper '.swiper-container-h', {
       nextButton: '.swiper-button-next'
       prevButton: '.swiper-button-prev'
       hashnav: true
       setWrapperSize: true
+      keyboardControl: true
       onSlideChangeEnd : (swiperObject)->
         setActiveSlide(swiperObject.activeIndex)
-
+    }
+    swiperV = new Swiper '.swiper-container-v', {
+      pagination: '.swiper-pagination-v'
+      paginationClickable: true
+      direction: 'vertical'
+      keyboardControl: true
+      hashnav: true
     }
     setupNavLinks()
     resizeContainer()

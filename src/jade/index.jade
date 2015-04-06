@@ -31,68 +31,7 @@ html(lang='en')
             img(class='question', src='/img/question.png', alt='question')
         include ./modules/nav.jade
       main#main
-        div.swiper-container
-          div.swiper-footer
-          div.swiper-wrapper.container-fluid
-            div.swiper-slide(data-hash='home')
-              div.swiper-slide-wrapper
-                div.row
-                  div.col-md-7.col-md-offset-4
-                    div.content-cell
-                      h2 Some home row content
-                      p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                div.row
-                  div.col-md-6
-                    div.content-cell
-                      h2 Something eoese
-                      p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                  div.col-md-6
-                    div.content-cell
-                      h2 Something eoese2
-                      p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                div.cow
-            div.swiper-slide(data-hash='read')
-              div.swiper-slide-wrapper
-                div.row
-                  div.col-md-7.col-md-offset-4
-                    div.content-cell
-                      h2 Some home row content
-                      p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                div.row
-                  div.col-md-12
-                    div.content-cell
-                      h2 Something eoese
-                      p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                div.tree-lg
-                  img(src='/img/tree-lg.png', alt='tree')
-            div.swiper-slide(data-hash='learn')
-              div.swiper-slide-wrapper
-                div.row
-                  div.col-md-7.col-md-offset-4
-                    div.content-cell
-                      h2 Some home row content
-                      p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                div.row
-                  div.col-md-6
-                    div.content-cell
-                      h2 Something eoese
-                      p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                  div.col-md-6
-                    div.content-cell
-                      h2 Something eoese2
-                      p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-          div.arrow.left.swiper-button-prev
-              img(src='/img/left-arrow.png', alt='left arrow')
-              a(href='#')
-                img(src='/img/that-way.png', alt='That way')
-                span That way
-            div.arrow.right.swiper-button-next
-              img(src='/img/right-arrow.png', alt='right arrow')
-              a(href='#')
-                img(src='/img/this-way.png', alt='This way')
-                span This way
-
+        include ./modules/swiper.jade
       include ./modules/footer.jade
     include ./modules/overlay.jade
     include ./modules/loading.jade
