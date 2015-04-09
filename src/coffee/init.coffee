@@ -13,7 +13,10 @@ acb.init = ((window, $, pageSlide) ->
   $overlay = $ '.overlay'
   $loading = $ '.loading'
   $menuTitle = $ '.menu-title'
+  $navLinks = $ 'nav a'
+  $header = $ 'header'
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+  swiper = undefined
   isMenuOpen = false
 
   animateLogo = ->
@@ -77,11 +80,28 @@ acb.init = ((window, $, pageSlide) ->
       target = e.target
       if isMenuOpen and target != $menuTitle[0]
         toggleMenu()
+
+    $navLinks.on 'click', (e)->
+      e.preventDefault()
+      $this = $ this
+      $navLinks.removeClass 'active'
+      if ($this.attr('data-slide-index') && !swiper.animating)
+        swiper.slideTo $this.attr('data-slide-index')
+        $this.addClass 'active'
+      if $this.parent('li').hasClass 'say-hi'
+        if $header.hasClass 'space'
+          $this.removeClass 'active'
+        else
+          $this.addClass 'active'
+        $header.toggleClass 'space'
+      else
+        $header.removeClass 'space'
     return
 
   # init app
   attachEvents()
   pageSlide.init()
+  swiper = pageSlide.getSwiper()
   $win.smartresize ()->
     pageSlide.resizeContainer()
     toggleMenu(false)

@@ -1,6 +1,11 @@
 div.swiper-container.swiper-container-h
-  div.swiper-footer
+  div.parallax-bg(style='background-image:url(/img/bg-hills.png)', data-swiper-parallax='-10%')
+  div.swiper-footer(data-swiper-parallax='-5%')
   div.swiper-wrapper.container-fluid
+
+
+
+    // # HOME
     div.swiper-slide(data-hash='home')
       div.swiper-slide-wrapper
         div.row
@@ -18,6 +23,8 @@ div.swiper-container.swiper-container-h
               h2 Something eoese2
               p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         div.cow
+
+    // # READ
     div.swiper-slide(data-hash='read')
       div.swiper-slide-wrapper
         div.row
@@ -32,29 +39,30 @@ div.swiper-container.swiper-container-h
               p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         div.tree-lg
           img(src='/img/tree-lg.png', alt='tree')
+
+    // # LEARN
     div.swiper-slide(data-hash='learn')
-      div.swiper-container.swiper-container-v
-        div.swiper-wrapper.container-fluid
-          div.swiper-slide(data-hash='learn')
-            div.swiper-slide-wrapper
-              div.row
-                div.col-md-7.col-md-offset-4
-                  div.content-cell
-                    h2 Some home row content
-                    p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-              div.row
-                div.col-md-6
-                  div.content-cell
-                    h2 Something eoese
-                    p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                div.col-md-6
-                  div.content-cell
-                    h2 Something eoese2
-                    p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          div.swiper-slide(data-hash='learn-more')
-            div.swiper-slide-wrapper
-              div.row TEST
-        div.swiper-pagination.swiper-pagination-v
+      div.swiper-slide-wrapper
+        div.dark-clouds
+          img.dark-cloud-1(src='/img/dark-cloud-1.png', alt='dark cloud')
+          img.dark-cloud-2(src='/img/dark-cloud-2.png', alt='dark cloud')
+          img.dark-cloud-3(src='/img/dark-cloud-3.png', alt='dark cloud')
+        div.row
+          div.col-md-7.col-md-offset-4
+            div.content-cell
+              h2 Some home row content
+              p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        div.row
+          div.col-md-6
+            div.content-cell
+              h2 Something eoese
+              p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          div.col-md-6
+            div.content-cell
+              h2 Something eoese2
+              p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      div.tree-sm
+        img(src='/img/tree-sm.png', alt='tree')
   div.arrow.left.swiper-button-prev
     img(src='/img/left-arrow.png', alt='left arrow')
     a(href='#')
