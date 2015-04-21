@@ -6,9 +6,41 @@ header {
   .transition(all 0.4s ease-in);
   &.space {
     height: 100%;
+    min-height:800px;
+    background-image: url(/img/stars.png);
+
+    .planets,
+    .spaceship,
+    .header-content{
+      display:block;
+    }
+
+    .planets {
+
+    }
+
+    h1 {
+      top: 123px;
+      left: -11px;
+    }
+
+    .cloud,
+    div.sun,
+    .bg-clouds,
+    .balloon {
+      display:none;
+    }
   }
 }
-
+.header-content {
+  display:none;
+  color:#fff;
+  font-size:2.8rem;
+  margin: 0 auto 0 31%;
+  width:80%;
+  width: 50%;
+  padding-top: 200px;
+}
 .logo {
   position: relative;
   cursor: pointer;
@@ -23,6 +55,9 @@ header {
   h1 {
     position: absolute;
     width: 100%;
+    top:0px;
+    left:0px;
+    .transition(top .2s ease-in-out);
     span {
       text-indent: -9999px;
       display: block;
@@ -63,12 +98,16 @@ header {
       }
     }
   }
+  .spaceship,
   .cloud {
     position: absolute;
     z-index: 9;
     top: 0;
     left: 0;
     opacity: 0;
+  }
+  .spaceship {
+    display:none;
   }
   .bg-clouds {
     position: absolute;
@@ -133,6 +172,7 @@ header {
 }
 
 .questions-corner {
+
   display: none;
   @media (min-width: @screen-md-min) {
     display: block;
@@ -152,6 +192,7 @@ header {
       .rotate(25)
     }
   }
+
   img {
     position: absolute;
     top: 10px;
@@ -173,4 +214,56 @@ header {
       }
     }
   }
+}
+
+.planets {
+  right:0;
+  display:none;
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  .planet {
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-name:orbit;
+    position: absolute;
+    &.one {
+      -webkit-animation-duration:10s;
+      top: -358px;
+      right: -395px;
+      width: 800px;
+      height: 800px;
+    }
+    &.two {
+      -webkit-animation-duration:8s;
+      top: -179px;
+      right: -185px;
+      width: 500px;
+      height: 500px;
+    }
+    &.three {
+      -webkit-animation-duration:18s;
+      top: -391px;
+      right: -420px;
+      width: 950px;
+      height: 950px;
+    }
+    &.four {
+      -webkit-animation-duration:5s;
+      top: -73px;
+      right: -68px;
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .sun {
+    position: absolute;
+    top: -16px;
+    right: -4px;
+  }
+}
+
+@-webkit-keyframes orbit {
+  from { -webkit-transform:rotate(0deg) }
+  to { -webkit-transform:rotate(360deg) }
 }

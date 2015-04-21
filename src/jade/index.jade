@@ -7,7 +7,7 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
   each val in styles
     link(rel='stylesheet', href=val)      
-  body
+  body.no-touch
     div.stage
       header
         div.logo
@@ -19,6 +19,8 @@ html(lang='en')
               Atheist Childrens' Books
           div.cloud
             img(src='/img/cloud.png', alt='cloud')
+          div.spaceship.bounceIn.animated
+            img(src='/img/spaceship.png', alt='spaceship')
           div.sun
             div.wrapper
                 img(class='centre', src='/img/sun-centre.png', alt='sun')
@@ -29,13 +31,31 @@ html(lang='en')
           div.wrapper
             img(class='balloon', src='/img/balloon.png', alt='balloon')
             img(class='question', src='/img/question.png', alt='question')
+        div.planets
+          ul
+            li.planet.one
+              img(src='/img/planet-1.png', alt='planet')
+            li.planet.two
+              img(src='/img/planet-2.png', alt='planet')
+            li.planet.three
+              img(src='/img/planet-3.png', alt='planet')
+            li.planet.four
+              img(src='/img/planet-4.png', alt='planet')
+            li.sun
+              img(src='/img/sun-centre.png', alt='sun')
         include ./modules/nav.jade
+        div.header-content
+          div.row
+            div.col-md-12
+              p If you want to know more about why we need more sites like this
+              p If you want to know more about why we need more sites like this
+              p If you want to know more about why we need more sites like this
+              p If you want to know more about why we need more sites like thi
       main#main
         include ./modules/swiper.jade
       include ./modules/footer.jade
     include ./modules/overlay.jade
     include ./modules/loading.jade
-
     if vendor
       each val in vendor
         script(src=val, type='text/javascript')

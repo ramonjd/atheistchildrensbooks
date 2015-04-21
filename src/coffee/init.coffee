@@ -4,7 +4,7 @@ acb.init = ((window, $, pageSlide) ->
   $stage = $ '.stage'
   $logoImgs = $ '.logo h1 > img'
   $arrows = $ '.arrow'
-  $sun = $ '.sun'
+  $sun = $ 'div.sun'
   $cloud = $ '.cloud'
   $clouds = $ '.bg-clouds'
   $balloon = $ '.questions-corner'
@@ -18,6 +18,7 @@ acb.init = ((window, $, pageSlide) ->
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
   swiper = undefined
   isMenuOpen = false
+  isSpaceOpen = false
 
   animateLogo = ->
     setTimeout ()->
@@ -43,6 +44,16 @@ acb.init = ((window, $, pageSlide) ->
       $body.addClass 'menu-open'
       isMenuOpen = true
     isMenuOpen
+
+  toggleSpace = (state) ->
+    if isSpaceOpen or state is false
+      $header.removeClass 'space'
+      isSpaceOpen = false
+      $('html, body').animate {scrollTop: 0}, 'slow'
+    else
+      $header.toggleClass 'space'
+      isSpaceOpen = $header.hasClass 'space'
+    isSpaceOpen
 
   finishLoading = ->
     $loading.addClass 'loaded'
@@ -88,14 +99,18 @@ acb.init = ((window, $, pageSlide) ->
       if ($this.attr('data-slide-index') && !swiper.animating)
         swiper.slideTo $this.attr('data-slide-index')
         $this.addClass 'active'
+      if $this.parent('li').hasClass 'about'
+        $overlay.addClass 'show'
+        $overlay.addClass 'bounceIn animated'
       if $this.parent('li').hasClass 'say-hi'
         if $header.hasClass 'space'
           $this.removeClass 'active'
         else
           $this.addClass 'active'
-        $header.toggleClass 'space'
+          window.location.hash = 'say-hi'
+        toggleSpace()
       else
-        $header.removeClass 'space'
+        toggleSpace(false)
     return
 
   # init app
