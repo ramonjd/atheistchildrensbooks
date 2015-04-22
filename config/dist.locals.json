@@ -1,0 +1,13 @@
+{
+  "scripts" : {
+    "head" : [
+      "/js/scripts.js"
+    ],
+    "body" : [
+      "/js/acb.min.js"
+    ]
+  },
+  "styles" : [
+    "/css/styles.min.css"
+    ]
+}

@@ -1,5 +1,6 @@
 # dev local variables
 devLocals = require './config/dev.locals.json'
+distLocals = require './config/dist.locals.json'
 
 # rewrite middleware
 modRewrite = require 'connect-modrewrite'
@@ -70,14 +71,12 @@ module.exports = (grunt)->
             devLocals
         files:
           '.tmp/index.html' : 'src/jade/index.jade'
-      ###    
       dist:
         options:
           data: (dest, src)->
             distLocals
         files:
           'dist/index.html' : 'src/jade/index.jade'
-      ###
     less:
       dev:
         files:
@@ -87,6 +86,13 @@ module.exports = (grunt)->
           compress: true
         files:
           'dist/css/styles.min.css' : 'src/less/styles.less'
+    uglify:
+      options:
+        mangle: false
+      dist:
+        files:
+          'dist/js/acb.min.js': devLocals.vendor.concat devLocals.scripts.body
+          'dist/js/scripts.js' : devLocals.scripts.head
     watch:
       html:
         files: 'src/jade/**/*.jade'
@@ -126,8 +132,8 @@ module.exports = (grunt)->
     #'createImgJs'
     'less:dev'
     'coffee:dev'
-    'copy:dev'
-    'jade'
+    'copy:dist'
+    'jade:compile'
   ]
   grunt.registerTask 'server', [
     'connect'
@@ -138,6 +144,12 @@ module.exports = (grunt)->
   grunt.registerTask 'dev', [
   ]
   grunt.registerTask 'dist', [
+    'clean:dist'
+    'less:dist'
+    'coffee:dev'
+    'copy:dist'
+    'jade:dist'
+    'uglify'
   ]
   grunt.registerTask 'default', [
     'compile'
