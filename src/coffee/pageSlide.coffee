@@ -11,7 +11,7 @@ acb.pageSlide = ((win, per, $) ->
       $navLinks.removeClass('active').eq(index).addClass 'active'
     , 250
   resizeContainer = ->
-    h = $win.height();
+    h = $win.height() + 75;
     if (h > 600)
       $swiperContainer.height h
 

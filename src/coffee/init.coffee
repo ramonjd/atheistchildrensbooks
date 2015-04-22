@@ -38,10 +38,10 @@ acb.init = ((window, $, pageSlide) ->
     if state is false && isMenuOpen is false
       return isMenuOpen
     if isMenuOpen or state is false
-      $body.removeClass 'menu-open'
+      $body.removeClass 'menu-open shadow'
       isMenuOpen = false
     else
-      $body.addClass 'menu-open'
+      $body.addClass 'menu-open shadow'
       isMenuOpen = true
     isMenuOpen
 
@@ -73,20 +73,27 @@ acb.init = ((window, $, pageSlide) ->
         $(e.target).removeClass 'shake animated'
         return
       return
+
     $footerLinks.mouseenter ()->
       $(this).toggleClass 'rubberBand animated'
       $footerLinks.one animationEnd, (e)->
         $(e.target).removeClass 'rubberBand animated'
         return
       return
+
     $close.on 'click', ()->
       $overlay.removeClass 'bounceIn animated'
       $overlay.removeClass 'show'
+      $body.removeClass 'shadow'
+
     $balloon.on 'click', ()->
       $overlay.addClass 'show'
       $overlay.addClass 'bounceIn animated'
+      $body.addClass 'shadow'
+
     $menuTitle.on 'click', ()->
       toggleMenu()
+
     $stage.on 'click', (e)->
       target = e.target
       if isMenuOpen and target != $menuTitle[0]
@@ -99,6 +106,7 @@ acb.init = ((window, $, pageSlide) ->
       if ($this.attr('data-slide-index') && !swiper.animating)
         swiper.slideTo $this.attr('data-slide-index')
         $this.addClass 'active'
+        toggleMenu(false)
       if $this.parent('li').hasClass 'about'
         $overlay.addClass 'show'
         $overlay.addClass 'bounceIn animated'

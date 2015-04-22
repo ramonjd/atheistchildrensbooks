@@ -11,7 +11,8 @@ header {
 
     .planets,
     .spaceship,
-    .header-content{
+    .header-content,
+    #svg-clouds {
       display:block;
     }
 
@@ -44,8 +45,11 @@ header {
 .logo {
   position: relative;
   cursor: pointer;
-  width: 250px;
+  width: 170px;
   float: left;
+  @media (min-width: @screen-sm-min) {
+    width: 250px;
+  }
   @media (min-width: @screen-md-min) {
     width: 375px;
   }
@@ -68,29 +72,42 @@ header {
       top: 0;
       z-index: 11;
       opacity: 0;
-      width: 70%;
+      width: 60%;
+      @media (min-width: @screen-sm-min) {
+        width: 70%;
+      }
       @media (min-width: @screen-md-min) {
         width: 50%;
       }
       &.atheist {
         top: -15px;
         left: 6px;
+        @media (min-width: @screen-sm-min) {
+        }
         @media (min-width: @screen-md-min) {
           top: 6px;
           left: 37px;
         }
       }
       &.childrens {
-        top: 13px;
-        left: 34px;
+        top: 3px;
+        left: 21px;
+        @media (min-width: @screen-sm-min) {
+          top: 13px;
+          left: 34px;
+        }
         @media (min-width: @screen-md-min) {
           top: 39px;
           left: 70px;
         }
       }
       &.books {
-        top: 52px;
-        left: 64px;
+        top: 24px;
+        left: 41px;
+        @media (min-width: @screen-sm-min) {
+          top: 52px;
+          left: 64px;
+        }
         @media (min-width: @screen-md-min) {
           top: 84px;
           left: 110px;
@@ -123,8 +140,10 @@ header {
     left: 133px;
     z-index: 8;
     width: 135px;
+    display:none;
     .transition(all .25s ease-out);
     @media (min-width: @screen-md-min) {
+      display:block;
       width: 170px;
       top: 70px;
       left: 197px;
@@ -220,7 +239,7 @@ header {
   right:0;
   display:none;
   position: absolute;
-  z-index: 8;
+  z-index: 0;
   top: 0;
   .planet {
     -webkit-animation-iteration-count:infinite;
@@ -266,4 +285,18 @@ header {
 @-webkit-keyframes orbit {
   from { -webkit-transform:rotate(0deg) }
   to { -webkit-transform:rotate(360deg) }
+}
+
+#svg-clouds {
+  position:absolute;
+  bottom:0;
+  left:0;
+  fill: #ecf0f1;
+  stroke: #ecf0f1;
+  display:none;
+  width: 100%;
+  height: 100px;
+  @media (min-width: @screen-md-min) {
+    height: 250px;
+  }
 }
