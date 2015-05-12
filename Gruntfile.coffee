@@ -71,6 +71,7 @@ module.exports = (grunt)->
             devLocals
         files:
           '.tmp/index.html' : 'src/jade/index.jade'
+          '.tmp/index2.html' : 'src/jade/index2.jade'
       dist:
         options:
           data: (dest, src)->
