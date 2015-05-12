@@ -106,7 +106,7 @@ acb.init = ((window, $, pageSlide) ->
       e.preventDefault()
       $this = $ this
       $navLinks.removeClass 'active'
-      if ($this.attr('data-slide-index') && !swiper.animating)
+###      if ($this.attr('data-slide-index') && !swiper.animating)
         swiper.slideTo $this.attr('data-slide-index')
         $this.addClass 'active'
         toggleMenu(false)
@@ -121,15 +121,15 @@ acb.init = ((window, $, pageSlide) ->
           window.location.hash = 'say-hi'
         toggleSpace()
       else
-        toggleSpace(false)
+        toggleSpace(false)###
     return
 
   # init app
   attachEvents()
-  pageSlide.init()
-  swiper = pageSlide.getSwiper()
+  #pageSlide.init()
+  #swiper = pageSlide.getSwiper()
   $win.smartresize ()->
-    pageSlide.resizeContainer()
+    #pageSlide.resizeContainer()
     toggleMenu(false)
 
   # loading

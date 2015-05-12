@@ -46,10 +46,26 @@ h1, h2, h3, h4, h5, nav {
   position: relative;
 }
 .stage {
-  height: 100%;
-  width: 100%;
   overflow-x: hidden;
 }
+
+main {
+  position:relative;
+  padding: 0 10%;
+  padding-top:200px;
+  padding-bottom:200px;
+}
+
+.grass {
+  background: url(/img/grass.png) repeat-x bottom left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  width: 130%;
+  height: 180px;
+}
+
 // animations
 .animated {
   -webkit-animation-duration: 1s;

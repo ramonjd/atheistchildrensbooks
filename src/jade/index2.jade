@@ -14,8 +14,57 @@ if scripts.head
     div.stage
       include ./modules/header.jade
       main#main
+        div.container-fluid
+          div.row
+            div.col-md-3.book
+              a(href='#')
+                figure
+                  div
+                    img(src='/img/i-wonder-harris.jpg', alt='')
+                  figcaption
+                    div
+                      h3 A book title
+                      span Author name
+            div.col-md-3.book
+              a(href='#')
+                figure
+                  div
+                    img(src='/img/i-wonder-harris.jpg', alt='')
+                  figcaption
+                    div
+                      h3 A book title
+                      span Author name
+            div.col-md-3.book
+              a(href='#')
+                figure
+                  div
+                    img(src='/img/i-wonder-harris.jpg', alt='')
+                  figcaption
+                    div
+                      h3 A book title
+                      span Author name
+            div.col-md-3.book
+              a(href='#')
+                figure
+                  div
+                    img(src='/img/i-wonder-harris.jpg', alt='')
+                  figcaption
+                    div
+                      h3 A book title
+                      span Author name
+          div.row
+            div.col-md-6
+              div.content-cell
+                h3 Something eoese
+                p(class='hidden-xs hidden-sm hidden-md') Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            div.col-md-6
+              div.content-cell
+                h3 Something eoese2
+                p(class='hidden-xs hidden-sm hidden-md') Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          div.cow
+          div.grass
 
-      include ./modules/footer.jade
+    include ./modules/footer.jade
     include ./modules/overlay.jade
     include ./modules/loading.jade
     if vendor
