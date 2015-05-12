@@ -46,7 +46,7 @@ acb.init = ((window, $, pageSlide) ->
     isMenuOpen
 
   toggleSpace = (state) ->
-    if isSpaceOpen or state is false
+    if isSpaceOpen is true or state is false
       $header.removeClass 'space'
       isSpaceOpen = false
       $('html, body').animate {scrollTop: 0}, 'slow'
@@ -96,8 +96,11 @@ acb.init = ((window, $, pageSlide) ->
 
     $stage.on 'click', (e)->
       target = e.target
+      targetHref = target.href || ''
       if isMenuOpen and target != $menuTitle[0]
         toggleMenu()
+      if isSpaceOpen and targetHref.indexOf('say-hi') is -1
+        toggleSpace(false)
 
     $navLinks.on 'click', (e)->
       e.preventDefault()
