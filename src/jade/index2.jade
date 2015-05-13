@@ -12,11 +12,12 @@ if scripts.head
     link(rel='stylesheet', href=val)
   body.no-touch
     div.stage
+      include ./modules/say-hi.jade
       include ./modules/header.jade
       main#main
         div.container-fluid
           div.row
-            div.col-md-3.book
+            div.col-sm-6.col-md-3.col-xs-12.book
               a(href='#')
                 figure
                   div
@@ -25,7 +26,7 @@ if scripts.head
                     div
                       h3 A book title
                       span Author name
-            div.col-md-3.book
+            div.col-sm-6.col-md-3.col-xs-12.book
               a(href='#')
                 figure
                   div
@@ -34,7 +35,7 @@ if scripts.head
                     div
                       h3 A book title
                       span Author name
-            div.col-md-3.book
+            div.col-sm-6.col-md-3.col-xs-12.book
               a(href='#')
                 figure
                   div
@@ -43,7 +44,7 @@ if scripts.head
                     div
                       h3 A book title
                       span Author name
-            div.col-md-3.book
+            div.col-sm-6.col-md-3.col-xs-12.book
               a(href='#')
                 figure
                   div
@@ -56,15 +57,17 @@ if scripts.head
             div.col-md-6
               div.content-cell
                 h3 Something eoese
-                p(class='hidden-xs hidden-sm hidden-md') Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
             div.col-md-6
               div.content-cell
                 h3 Something eoese2
-                p(class='hidden-xs hidden-sm hidden-md') Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
           div.cow
+          div.tree-lg
+            img(src='/img/tree-lg.png', alt='tree')
           div.grass
 
-    include ./modules/footer.jade
+      include ./modules/footer.jade
     include ./modules/overlay.jade
     include ./modules/loading.jade
     if vendor

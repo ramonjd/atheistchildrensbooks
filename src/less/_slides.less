@@ -6,11 +6,6 @@ body.loaded {
   }
 }
 
-.container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .swiper-container {
   width: 100%;
   position: relative;
@@ -100,101 +95,7 @@ body.loaded {
   padding: 20px;
 }
 
-.tree-lg {
-  position: absolute;
-  bottom: 75px;
-  right: -60px;
-  cursor: pointer;
-  display:none;
-  @media (min-width: @screen-sm-min) {
-    display:block;
-  }
-  img {
-    width: 65%;
-  }
-  @media (min-width: @screen-md-min) {
-    bottom: 75px;
-    right: 80px;
-    img {
-      width: 100%;
-    }
-  }
-}
 
-.tree-sm {
-  position: absolute;
-  bottom: 108px;
-  right: 10px;
-  cursor: pointer;
-  display:none;
-  @media (min-width: @screen-sm-min) {
-    display:block;
-  }
-  img {
-    width: 65%;
-  }
-  @media (min-width: @screen-md-min) {
-    bottom: 95px;
-    right: 80px;
-    img {
-      width: 100%;
-    }
-  }
-}
-
-.book {
-
-  overflow:hidden;
-  margin-bottom:10px;
-
-  figure {
-
-  }
-
-  figcaption {
-    display:none;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  @media (min-width: @screen-md-min) {
-    height:auto;
-    margin-bottom:0;
-  }
-
-}
-
-
-
-.cow {
-  width: 320px;
-  height: 240px;
-  background-image: url('/img/cow.png');
-  position: absolute;
-  bottom: -32px;
-  right: 0;
-  cursor: pointer;
-  .transition(all 0.3s);
-  display:none;
-  @media (min-width: @screen-sm-min) {
-    display:block;
-  }
-  @media (min-width: @screen-md-min) {
-    bottom: 75px;
-    &:hover {
-      right: 20px;
-    }
-  }
-  &:hover {
-    bottom: 75px;
-    -webkit-animation: chew 1s steps(6) infinite;
-    -moz-animation: chew 1s steps(6) infinite;
-    -ms-animation: chew 1s steps(6) infinite;
-    -o-animation: chew 1s steps(6) infinite;
-  }
-}
 
 .arrow {
   width: 75px;
@@ -242,25 +143,4 @@ body.loaded {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
-}
-
-.dark-clouds {
-  display:none;
-  @media (min-width: @screen-sm-min) {
-    display:block;
-  }
-  img {
-    position: absolute;
-    top: 12%;
-    left: 13%;
-    &.dark-cloud-2 {
-      top: 18%;
-      left: 35%;
-    }
-    &.dark-cloud-3 {
-      top: 19%;
-      left: auto;
-      right: 6%;
-    }
-  }
 }

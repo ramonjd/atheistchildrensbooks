@@ -15,6 +15,8 @@ acb.init = ((window, $, pageSlide) ->
   $menuTitle = $ '.menu-title'
   $navLinks = $ 'nav a'
   $header = $ 'header'
+  $darkClouds = $ '.dark-clouds'
+  $sayHi = $ '#say-hi'
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
   swiper = undefined
   isMenuOpen = false
@@ -47,12 +49,14 @@ acb.init = ((window, $, pageSlide) ->
 
   toggleSpace = (state) ->
     if isSpaceOpen is true or state is false
-      $header.removeClass 'space'
+      $sayHi.removeClass 'space'
+      $darkClouds.removeClass 'show'
       isSpaceOpen = false
       $('html, body').animate {scrollTop: 0}, 'slow'
     else
-      $header.toggleClass 'space'
-      isSpaceOpen = $header.hasClass 'space'
+      $sayHi.toggleClass 'space'
+      $darkClouds.toggleClass 'show'
+      isSpaceOpen = $sayHi.hasClass 'space'
     isSpaceOpen
 
   finishLoading = ->
@@ -82,6 +86,7 @@ acb.init = ((window, $, pageSlide) ->
       return
 
     $close.on 'click', ()->
+      console.log 'test'
       $overlay.removeClass 'bounceIn animated'
       $overlay.removeClass 'show'
       $body.removeClass 'shadow'
@@ -105,23 +110,11 @@ acb.init = ((window, $, pageSlide) ->
     $navLinks.on 'click', (e)->
       e.preventDefault()
       $this = $ this
+      $parent = $this.parent 'li'
       $navLinks.removeClass 'active'
-###      if ($this.attr('data-slide-index') && !swiper.animating)
-        swiper.slideTo $this.attr('data-slide-index')
-        $this.addClass 'active'
-        toggleMenu(false)
-      if $this.parent('li').hasClass 'about'
-        $overlay.addClass 'show'
-        $overlay.addClass 'bounceIn animated'
-      if $this.parent('li').hasClass 'say-hi'
-        if $header.hasClass 'space'
-          $this.removeClass 'active'
-        else
-          $this.addClass 'active'
-          window.location.hash = 'say-hi'
+      $this.addClass 'active'
+      if $parent.hasClass 'say-hi'
         toggleSpace()
-      else
-        toggleSpace(false)###
     return
 
   # init app
