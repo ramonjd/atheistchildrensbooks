@@ -18,7 +18,6 @@ acb.init = ((window, $, pageSlide) ->
   $darkClouds = $ '.dark-clouds'
   $sayHi = $ '#say-hi'
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
-  swiper = undefined
   isMenuOpen = false
   isSpaceOpen = false
 
@@ -59,6 +58,12 @@ acb.init = ((window, $, pageSlide) ->
       isSpaceOpen = $sayHi.hasClass 'space'
     isSpaceOpen
 
+  openOverlay = ->
+    $overlay.addClass 'show'
+    $overlay.addClass 'bounceIn animated'
+    $body.addClass 'shadow'
+    return
+
   finishLoading = ->
     $loading.addClass 'loaded'
     setTimeout ()->
@@ -86,25 +91,21 @@ acb.init = ((window, $, pageSlide) ->
       return
 
     $close.on 'click', ()->
-      console.log 'test'
       $overlay.removeClass 'bounceIn animated'
       $overlay.removeClass 'show'
       $body.removeClass 'shadow'
 
     $balloon.on 'click', ()->
-      $overlay.addClass 'show'
-      $overlay.addClass 'bounceIn animated'
-      $body.addClass 'shadow'
+      openOverlay()
 
     $menuTitle.on 'click', ()->
       toggleMenu()
 
     $stage.on 'click', (e)->
-      target = e.target
-      targetHref = target.href || ''
-      if isMenuOpen and target != $menuTitle[0]
+      $target = $ e.target
+      if isMenuOpen and $target[0] != $menuTitle[0]
         toggleMenu()
-      if isSpaceOpen and targetHref.indexOf('say-hi') is -1
+      if isSpaceOpen and $target.parents('#say-hi').length is 0 and $target.parents('.say-hi').length is 0
         toggleSpace(false)
 
     $navLinks.on 'click', (e)->
@@ -115,14 +116,13 @@ acb.init = ((window, $, pageSlide) ->
       $this.addClass 'active'
       if $parent.hasClass 'say-hi'
         toggleSpace()
+      if $parent.hasClass('about') or $parent.hasClass('read') or $parent.hasClass('learn')
+        openOverlay()
     return
 
   # init app
   attachEvents()
-  #pageSlide.init()
-  #swiper = pageSlide.getSwiper()
   $win.smartresize ()->
-    #pageSlide.resizeContainer()
     toggleMenu(false)
 
   # loading
@@ -134,4 +134,4 @@ acb.init = ((window, $, pageSlide) ->
   }
 
   return
-) window, jQuery, acb.pageSlide
+) window, jQuery

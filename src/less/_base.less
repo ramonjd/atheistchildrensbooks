@@ -28,6 +28,7 @@ html {
   height: 100%;
   width: 100%;
   color: #333;
+  font-size:1.1rem;
   line-height: 1.4;
   letter-spacing: .03em;
   margin: 0;
@@ -41,6 +42,14 @@ html {
 }
 h1, h2, h3, h4, h5, nav {
   text-transform: uppercase;
+  font-weight:700;
+}
+
+.invert {
+  background-color: #fff;
+  padding:10px 12px 8px 12px;
+  color:#000;
+  display:inline-block;
 }
 .wrapper {
   position: relative;
@@ -54,9 +63,10 @@ main {
   position:relative;
   padding: 0 10%;
   padding-top:85px;
-  padding-bottom:200px;
+  padding-bottom:300px;
+  overflow:hidden;
   @media (min-width: @screen-md-min) {
-    padding-top:200px;
+    padding-top:250px;
   }
 }
 
@@ -70,6 +80,22 @@ main {
   height: 180px;
 }
 
+  .hills {
+  background: url(/img/bg-hills.png) repeat-x bottom left;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+    width: 130%;
+    height: 200px;
+    z-index:0;
+    -webkit-background-size: 100% 406px;
+    background-size: 100% 406px;
+    background-position: center;
+    @media (min-width: @screen-md-min) {
+
+    }
+  }
+
 
 .tree-lg {
   position: absolute;
@@ -77,6 +103,7 @@ main {
   left: -10px;
   cursor: pointer;
   display:none;
+  z-index:30;
   @media (min-width: @screen-sm-min) {
     display:block;
   }
@@ -96,6 +123,7 @@ main {
   right: 10px;
   cursor: pointer;
   display:none;
+z-index:30;
   @media (min-width: @screen-sm-min) {
     display:block;
   }
@@ -147,6 +175,7 @@ main {
   position: absolute;
   bottom: 10px;
   right: 0;
+  z-index:30;
   cursor: pointer;
   .transition(all 0.3s);
   display:none;

@@ -1,19 +1,7 @@
 .planets{
   display: none;
 }
-.dark-clouds {
-  position:absolute;
-  opacity:0;
-  transition-property: all;
-  transition-duration: .2s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  top: 283px;
-  z-index: 5;
-  &.show {
-    opacity:1;
-  }
 
-}
 
 #say-hi {
   position: relative;
@@ -22,19 +10,25 @@
   overflow: hidden;
   transition-property: all;
   transition-duration: .5s;
+  height: 400px;
+
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   .spaceship {
     position: absolute;
     top:10px;
     left:10px;
     width:200px;
+    display:none;
+    @media (min-width: @screen-sm-min) {
+      display:block;
+    }
+
     img {
       max-width: 100%
     }
   }
   &.space {
     margin-top:0px;
-    height: 400px;
     background-image: url(/img/stars.png);
 
     .planets,
@@ -47,6 +41,10 @@
       position: absolute;
       z-index: 0;
       top: 0;
+      display:none;
+      @media (min-width: @screen-sm-min) {
+        display:block;
+      }
       .planet {
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-timing-function: linear;
@@ -92,12 +90,22 @@
 }
 
 .header-content {
-
   color: #fff;
-  font-size: 2.8rem;
-  margin: 100px auto;
-  width: 80%;
-
+  font-size: 1.2rem;
+  width: 70%;
+  margin: 30px auto;
+  h2 {
+    font-size:1.4rem;
+  }
+  @media (min-width: @screen-sm-min) {
+    margin: 80px auto;
+  }
+  @media (min-width: @screen-lg-min) {
+    h2 {
+      font-size:1.8rem;
+    }
+    font-size: 1.6rem;
+  }
 }
 
 @-webkit-keyframes orbit {
