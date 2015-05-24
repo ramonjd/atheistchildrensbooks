@@ -1,22 +1,45 @@
 {
   "vendor" : [
     "bower_components/jquery/dist/jquery.js",
-    "bower_components/swiper/dist/js/swiper.jquery.js"
+    ".tmp/js/smartresize.js"
   ],
   "scripts" : {
     "head" : [
       "bower_components/modernizr/modernizr.js"
     ],
     "body" : [
+      ".tmp/js/preloaderAssets.js",
       ".tmp/js/preloadImages.js",
-      ".tmp/js/smartresize.js",
       ".tmp/js/acb.js",
-      ".tmp/js/pageSlide.js",
       ".tmp/js/init.js"
     ]
   },
   "styles" : [
-    "bower_components/swiper/dist/css/swiper.css",
     "/css/styles.css"
+  ],
+  "pages" : {
+    ".tmp/index.html" : "src/jade/index.jade",
+    ".tmp/about.html" : "src/jade/about.jade",
+    ".tmp/read.html" : "src/jade/read.jade",
+    ".tmp/book.html" : "src/jade/book.jade"
+  },
+  "navigation" : [
+
+    {
+      "class" : "read",
+      "label" : "read",
+      "link" : "/read.html"
+    },
+    {
+      "class" : "learn",
+      "label" : "learn",
+      "link" : "/learn.html"
+    },
+    {
+      "class" : "about",
+      "label" : "about",
+      "link" : "/about.html"
+    }
+
   ]
 }

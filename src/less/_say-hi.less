@@ -1,17 +1,14 @@
 .planets{
   display: none;
 }
-
-
 #say-hi {
   position: relative;
   background-color: rgba(0, 0, 0, .87);
-  margin-top:-400px;
+  margin-top:-600px;
   overflow: hidden;
   transition-property: all;
   transition-duration: .5s;
-  height: 400px;
-
+  height: 600px;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   .spaceship {
     position: absolute;
@@ -22,7 +19,6 @@
     @media (min-width: @screen-sm-min) {
       display:block;
     }
-
     img {
       max-width: 100%
     }
@@ -30,12 +26,10 @@
   &.space {
     margin-top:0px;
     background-image: url(/img/stars.png);
-
     .planets,
     .header-content {
       display: block;
     }
-
     .planets {
       right: 0;
       position: absolute;
@@ -50,6 +44,7 @@
         -webkit-animation-timing-function: linear;
         -webkit-animation-name: orbit;
         position: absolute;
+        list-style: none;
         &.one {
           -webkit-animation-duration: 10s;
           top: -358px;
@@ -96,6 +91,13 @@
   margin: 30px auto;
   h2 {
     font-size:1.4rem;
+  }
+  a {
+    font-size: 1.5rem;
+    .text {
+      display: inline-block;
+      margin-left:8px;
+    }
   }
   @media (min-width: @screen-sm-min) {
     margin: 80px auto;

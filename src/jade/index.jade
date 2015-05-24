@@ -1,7 +1,7 @@
 doctype html
 html(lang='en')
   head
-    title Atheist Childrens' Books
+    title Atheist Children's Books :: Home
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -10,16 +10,17 @@ if scripts.head
     script(src=val, type='text/javascript')
   each val in styles
     link(rel='stylesheet', href=val)
-  body.no-touch
+  body.no-touch.home
     div.stage
       include ./modules/say-hi.jade
       include ./modules/header.jade
       main#main
         div.container-fluid
-          h2 Latest books and reviews
+          h1 Latest books and reviews
           div.row
             div.col-sm-6.col-md-3.col-xs-12.book
               a(href='#')
+                span.age.label.label-info 4-8 years
                 figure
                   div
                     img(src='/img/i-wonder-harris.jpg', alt='')
@@ -29,6 +30,17 @@ if scripts.head
                       span Author name
             div.col-sm-6.col-md-3.col-xs-12.book
               a(href='#')
+                span.age.label.label-info 4-8 years
+                figure
+                  div
+                    img(src='/img/me-and-dog.png', alt='')
+                  figcaption
+                    div
+                      h3 Me and Dog
+                      span Gene Weingarten
+            div.col-sm-6.col-md-3.col-xs-12.book
+              a(href='#')
+                span.age.label.label-info 4-8 years
                 figure
                   div
                     img(src='/img/i-wonder-harris.jpg', alt='')
@@ -38,18 +50,10 @@ if scripts.head
                       span Author name
             div.col-sm-6.col-md-3.col-xs-12.book
               a(href='#')
+                span.age.label.label-info 4-8 years
                 figure
                   div
-                    img(src='/img/i-wonder-harris.jpg', alt='')
-                  figcaption
-                    div
-                      h3 A book title
-                      span Author name
-            div.col-sm-6.col-md-3.col-xs-12.book
-              a(href='#')
-                figure
-                  div
-                    img(src='/img/i-wonder-harris.jpg', alt='')
+                    img(src='/img/me-and-dog.png', alt='')
                   figcaption
                     div
                       h3 A book title
@@ -77,9 +81,8 @@ if scripts.head
             img(src='/img/tree-lg.png', alt='tree')
           div.grass
           div.hills
-
-
       include ./modules/footer.jade
+
     include ./modules/overlay.jade
     include ./modules/loading.jade
     if vendor

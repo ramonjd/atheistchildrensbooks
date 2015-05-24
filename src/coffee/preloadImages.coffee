@@ -23,7 +23,9 @@
         items.push url
       return
     return
-
+  getPreloaderImages =()->
+    items = window.acbPreloaderAssets
+    items
   loadComplete = ->
     current++
     onStep Math.round(current / items.length * 100)
@@ -42,7 +44,7 @@
         onStep = options.onStep
       if typeof options.onComplete != 'undefined'
         onComplete = options.onComplete
-      getImages this
+      getPreloaderImages()
       i = 0
       while i < items.length
         loadImg items[i]

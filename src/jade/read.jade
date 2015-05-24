@@ -1,0 +1,64 @@
+- var page = 'read'
+doctype html
+html(lang='en')
+  head
+    title Atheist Children's Books :: Read
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+if scripts.head
+  each val in scripts.head
+    script(src=val, type='text/javascript')
+  each val in styles
+    link(rel='stylesheet', href=val)
+  body.no-touch
+    div.stage
+      include ./modules/say-hi.jade
+      include ./modules/header.jade
+      main#main
+        div.container-fluid
+          h1 Read
+          div.row
+            div.col-sm-3
+              img.img-responsive(src='/img/i-wonder-harris.jpg', alt='')
+            div.col-sm-9
+              h2 Blah blah blah
+              p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
+          div.row
+            div.col-sm-3
+              img.img-responsive(src='/img/i-wonder-harris.jpg', alt='')
+            div.col-sm-9
+              h2 Blah blah blah
+              p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
+          div.row
+            div.col-sm-3
+              img.img-responsive(src='/img/i-wonder-harris.jpg', alt='')
+            div.col-sm-9
+              h2 Blah blah blah
+              p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
+          div.row
+            div.col-sm-3
+              img.img-responsive(src='/img/i-wonder-harris.jpg', alt='')
+            div.col-sm-9
+              h2 Blah blah blah
+              p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
+          div.row
+            div.col-sm-3
+              img.img-responsive(src='/img/i-wonder-harris.jpg', alt='')
+            div.col-sm-9
+              h2 Blah blah blah
+              p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
+
+          div.cow
+          div.tree-lg
+            img(src='/img/tree-lg.png', alt='tree')
+          div.grass
+          div.hills
+      include ./modules/footer.jade
+    include ./modules/overlay.jade
+    include ./modules/loading.jade
+    if vendor
+      each val in vendor
+        script(src=val, type='text/javascript')
+    each val in scripts.body
+      script(src=val, type='text/javascript')

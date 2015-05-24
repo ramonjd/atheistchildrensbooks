@@ -9,5 +9,30 @@
   },
   "styles" : [
     "/css/styles.min.css"
-    ]
+    ],
+  "pages" : {
+    "dist/index.html" : "src/jade/index.jade",
+    "dist/about.html" : "src/jade/about.jade",
+    "dist/read.html" : "src/jade/read.jade",
+    "dist/book.html" : "src/jade/book.jade"
+  },
+  "navigation" : [
+
+    {
+      "class" : "read",
+      "label" : "read",
+      "link" : "/read.html"
+    },
+    {
+      "class" : "learn",
+      "label" : "learn",
+      "link" : "/learn.html"
+    },
+    {
+      "class" : "about",
+      "label" : "about",
+      "link" : "/about.html"
+    }
+
+  ]
 }

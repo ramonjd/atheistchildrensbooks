@@ -2,7 +2,7 @@ acb.init = ((window, $, pageSlide) ->
   $body = $ 'body'
   $win = $ window
   $stage = $ '.stage'
-  $logoImgs = $ '.logo h1 > img'
+  $logoImgs = $ '.logo-wrapper > img'
   $arrows = $ '.arrow'
   $sun = $ 'div.sun'
   $cloud = $ '.cloud'
@@ -12,9 +12,7 @@ acb.init = ((window, $, pageSlide) ->
   $close = $ '.close'
   $overlay = $ '.overlay'
   $loading = $ '.loading'
-  $menuTitle = $ '.menu-title'
-  $navLinks = $ 'nav a'
-  $header = $ 'header'
+  $menuTitle = $ '.menu-title span'
   $darkClouds = $ '.dark-clouds'
   $sayHi = $ '#say-hi'
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
@@ -49,20 +47,15 @@ acb.init = ((window, $, pageSlide) ->
   toggleSpace = (state) ->
     if isSpaceOpen is true or state is false
       $sayHi.removeClass 'space'
+      $body.removeClass 'space-open'
       $darkClouds.removeClass 'show'
       isSpaceOpen = false
       $('html, body').animate {scrollTop: 0}, 'slow'
     else
       $sayHi.toggleClass 'space'
+      $body.toggleClass 'space-open'
       $darkClouds.toggleClass 'show'
       isSpaceOpen = $sayHi.hasClass 'space'
-    isSpaceOpen
-
-  openOverlay = ->
-    $overlay.addClass 'show'
-    $overlay.addClass 'bounceIn animated'
-    $body.addClass 'shadow'
-    return
 
   finishLoading = ->
     $loading.addClass 'loaded'
@@ -96,7 +89,7 @@ acb.init = ((window, $, pageSlide) ->
       $body.removeClass 'shadow'
 
     $balloon.on 'click', ()->
-      openOverlay()
+      toggleSpace()
 
     $menuTitle.on 'click', ()->
       toggleMenu()
@@ -105,19 +98,9 @@ acb.init = ((window, $, pageSlide) ->
       $target = $ e.target
       if isMenuOpen and $target[0] != $menuTitle[0]
         toggleMenu()
-      if isSpaceOpen and $target.parents('#say-hi').length is 0 and $target.parents('.say-hi').length is 0
+      if isSpaceOpen is true and $target.parents('#say-hi').length is 0 and $target.parents('.questions-corner').length is 0
         toggleSpace(false)
 
-    $navLinks.on 'click', (e)->
-      e.preventDefault()
-      $this = $ this
-      $parent = $this.parent 'li'
-      $navLinks.removeClass 'active'
-      $this.addClass 'active'
-      if $parent.hasClass 'say-hi'
-        toggleSpace()
-      if $parent.hasClass('about') or $parent.hasClass('read') or $parent.hasClass('learn')
-        openOverlay()
     return
 
   # init app

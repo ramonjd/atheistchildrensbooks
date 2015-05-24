@@ -37,7 +37,7 @@ module.exports = (grunt)->
           middleware: (connect)->
             middlewares = [
               modRewrite([
-                '!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.gif|\\.jpg$ /index.html [L]'
+                '!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.gif|\\.jpg|\\.eot|\\.ttf|\\.woff$ /index.html [L]'
               ])
               mountFolder connect, './'
               mountFolder connect, '.tmp/'
@@ -59,9 +59,25 @@ module.exports = (grunt)->
             ]
             dest: 'dist/img/'
           }
+          {
+            expand:true
+            cwd: 'bower_components/bootstrap/'
+            src: [
+              'fonts/*'
+            ]
+            dest: 'dist/'
+          }
         ]
       dev:
         files: [
+          {
+            expand:true
+            cwd: 'bower_components/bootstrap/'
+            src: [
+              'fonts/*'
+            ]
+            dest: '.tmp/'
+          }
         ]
     jade:
       compile:
@@ -69,14 +85,12 @@ module.exports = (grunt)->
           pretty: true
           data: (dest, src)->
             devLocals
-        files:
-          '.tmp/index.html' : 'src/jade/index.jade'
+        files: devLocals.pages
       dist:
         options:
           data: (dest, src)->
             distLocals
-        files:
-          'dist/index.html' : 'src/jade/index.jade'
+        files: distLocals.pages
     less:
       dev:
         files:
@@ -112,7 +126,7 @@ module.exports = (grunt)->
   grunt.registerTask 'createImgJs', 'recurse through img dir', ()->
     imgs = []
     dest = '.tmp/js/preloaderAssets.js'
-    contents = 'acb.preloaderAssets=['
+    contents = 'var acbPreloaderAssets=['
     grunt.file.recurse 'src/img/', (abspath, rootdir, subdir, filename)->
       imgs.push '\'/img/' + filename + '\''
     contents += imgs + '];'
@@ -129,10 +143,10 @@ module.exports = (grunt)->
   #
   grunt.registerTask 'compile', [
     'clean:dev'
-    #'createImgJs'
+    'createImgJs'
     'less:dev'
     'coffee:dev'
-    'copy:dist'
+    'copy:dev'
     'jade:compile'
   ]
   grunt.registerTask 'server', [
