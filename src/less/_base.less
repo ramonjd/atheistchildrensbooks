@@ -45,6 +45,10 @@ h1, h2, h3, h4, h5, nav {
   font-weight:700;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 .invert {
   background-color: #fff;
   padding:10px 12px 8px 12px;
@@ -200,6 +204,7 @@ z-index:30;
     padding-top:10px;
     overflow:hidden;
     position:relative;
+    border-radius: 6px;
     &:hover {
 
       span {
@@ -234,7 +239,6 @@ z-index:30;
 
   img {
     max-width: 100%;
-    border:2px solid white;
   }
 
   @media (min-width: @screen-md-min) {
@@ -271,6 +275,12 @@ z-index:30;
     -ms-animation: chew 1s steps(6) infinite;
     -o-animation: chew 1s steps(6) infinite;
   }
+}
+
+.content-cell {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
 }
 
 // animations
