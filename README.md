@@ -19,6 +19,6 @@ http://www.washingtonpost.com/news/style/wp/2014/09/17/gene-weingartens-first-ch
 http://www.amazon.com/Me-Dog-Gene-Weingarten/dp/1442494131/ref=sr_1_1?ie=UTF8&qid=1410955661&sr=8-1&keywords=me+dog+weingarten
 
 https://github.com/nzakas/understandinges6/blob/master/manuscript/03-Objects.md
-
+http://blog.durandal.io/2015/01/26/introducing-aurelia/
 
 

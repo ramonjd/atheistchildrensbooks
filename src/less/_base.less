@@ -73,10 +73,12 @@ article {
 
 main {
   position:relative;
-  padding: 0 10%;
   padding-top:85px;
   padding-bottom:300px;
   overflow:hidden;
+  &.sea {
+    padding-bottom: 0;
+  }
   .row {
     margin-bottom:20px;
   }
@@ -87,6 +89,9 @@ main {
   @media (min-width: @screen-md-min) {
     padding-top:250px;
   }
+}
+.main-wrapper {
+  background-color:#B9F0FE;
 }
 .cloud-layer {
   background: url(/img/cloud-layer.png) repeat-x bottom left;
@@ -104,7 +109,7 @@ body.space-open {
     opacity:1;
   }
 }
-
+.sand,
 .grass {
   background: url(/img/grass.png) repeat-x bottom left;
   position: absolute;
@@ -114,7 +119,18 @@ body.space-open {
   width: 130%;
   height: 180px;
 }
+.sand {
+  background-image: url(/img/sand.png);
+}
+.waves {
+  background: url(/img/waves.png) repeat-x top left;
+  position: absolute;
+  top:185px;
+  z-index: 0;
+  height:80px;
+  width: 130%;
 
+}
   .hills {
   background: url(/img/bg-hills.png) repeat-x bottom left;
   position: absolute;
@@ -184,6 +200,17 @@ z-index:30;
     padding-top:10px;
     overflow:hidden;
     position:relative;
+    &:hover {
+
+      span {
+        background:white;
+        color:black;
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
   }
 
   .age {
@@ -216,8 +243,6 @@ z-index:30;
   }
 
 }
-
-
 
 .cow {
   width: 320px;
