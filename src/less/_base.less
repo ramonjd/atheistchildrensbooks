@@ -78,7 +78,7 @@ article {
 main {
   position:relative;
   padding-top:85px;
-  padding-bottom:300px;
+  padding-bottom:180px;
   overflow:hidden;
   &.sea {
     padding-bottom: 0;
@@ -96,6 +96,7 @@ main {
 }
 .main-wrapper {
   background-color:#B9F0FE;
+  padding:30px 1%;
 }
 .cloud-layer {
   background: url(/img/cloud-layer.png) repeat-x bottom left;
@@ -124,15 +125,21 @@ body.space-open {
   height: 180px;
 }
 .sand {
-  background-image: url(/img/sand.png);
+  background: url(/img/sand.png) repeat-x top left;
 }
 .waves {
   background: url(/img/waves.png) repeat-x top left;
   position: absolute;
-  top:185px;
+  top:15px;
   z-index: 0;
   height:80px;
   width: 130%;
+  @media (min-width: @screen-sm-min) {
+    top:50px;
+  }
+  @media (min-width: @screen-md-min) {
+    top:185px;
+  }
 
 }
   .hills {
