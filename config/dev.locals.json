@@ -21,6 +21,7 @@
     ".tmp/index.html" : "src/jade/index.jade",
     ".tmp/about.html" : "src/jade/about.jade",
     ".tmp/read.html" : "src/jade/read.jade",
+    ".tmp/learn.html" : "src/jade/learn.jade",
     ".tmp/book.html" : "src/jade/book.jade"
   },
   "navigation" : [

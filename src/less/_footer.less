@@ -1,15 +1,30 @@
 footer {
-  background:url(/img/grass-bg.png);
+  background: url(/img/grass-bg.png);
+}
+
+.read footer {
+  background: url(/img/sand-bg.png);
+}
+
+.learn footer {
+  background: url(/img/cloud-layer.png) repeat-x 0px -133px;
+  background-color: @bg-color;
+  .second-stratum {
+    background: 0;
+  }
+}
+
+footer {
   section {
     //padding:20px;
     //background: rgba(151, 93, 41, 0.65);
     //border-radius: 15px;
   }
-  .grass-layer {
+  .first-stratum {
     padding-bottom:75px;
   }
 
-  .crust-layer {
+  .second-stratum {
     background: url(/img/crust-layer.png) repeat-x top left;
     padding-top:160px;
     color:white;

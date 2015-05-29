@@ -12,7 +12,7 @@ if scripts.head
   each val in styles
     link(rel='stylesheet', href=val)
   body.no-touch
-    div.stage
+    div.stage.read
       include ./modules/say-hi.jade
       include ./modules/header.jade
       main#main
