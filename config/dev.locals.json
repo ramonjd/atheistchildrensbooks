@@ -1,46 +1,25 @@
 {
   "vendor" : [
     "bower_components/jquery/dist/jquery.js",
-    ".tmp/js/smartresize.js"
+    "bower_components/angular/angular.js",
+    "bower_components/angular-route/angular-route.js",
+    "bower_components/angular-sanitize/angular-sanitize.js"
   ],
   "scripts" : {
     "head" : [
       "bower_components/modernizr/modernizr.js"
     ],
     "body" : [
-      ".tmp/js/preloaderAssets.js",
-      ".tmp/js/preloadImages.js",
-      ".tmp/js/acb.js",
-      ".tmp/js/init.js"
+      ".tmp/js/templates.js",
+      ".tmp/js/app.js",
+      ".tmp/js/constants.js",
+      ".tmp/js/jqueryFactory.js",
+      ".tmp/js/MainController.js",
+      ".tmp/js/HomeController.js",
+      ".tmp/js/siteHeaderDirective.js"
     ]
   },
   "styles" : [
-    "/css/styles.css"
-  ],
-  "pages" : {
-    ".tmp/index.html" : "src/jade/index.jade",
-    ".tmp/about.html" : "src/jade/about.jade",
-    ".tmp/read.html" : "src/jade/read.jade",
-    ".tmp/learn.html" : "src/jade/learn.jade",
-    ".tmp/book.html" : "src/jade/book.jade"
-  },
-  "navigation" : [
-
-    {
-      "class" : "read",
-      "label" : "read",
-      "link" : "/read.html"
-    },
-    {
-      "class" : "learn",
-      "label" : "learn",
-      "link" : "/learn.html"
-    },
-    {
-      "class" : "about",
-      "label" : "about",
-      "link" : "/about.html"
-    }
-
+    "/css/base.css"
   ]
 }
