@@ -23,6 +23,10 @@
   background: #f03252
 }
 
+html {
+  overflow-x:hidden;
+}
+
 body,
 html {
   height: 100%;
@@ -59,7 +63,6 @@ h1 {
   position: relative;
 }
 .stage {
-  overflow-x:hidden;
   &::before {
     position: absolute;
     top: 0;
@@ -145,6 +148,7 @@ main {
   border:0;
   position:absolute;
   bottom:-80px;
+  left:0;
   .transition(all .1s ease-out);
 }
 
@@ -169,6 +173,7 @@ main {
   z-index: 0;
   height:80px;
   width: 130%;
+  left: 0;
   @media (min-width: @screen-sm-min) {
     top:50px;
   }

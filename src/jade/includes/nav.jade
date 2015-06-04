@@ -1,13 +1,7 @@
 div.menu-title
-  span.glyphicon.glyphicon-menu-hamburger(aria-hidden='true')
+  span.glyphicon.glyphicon-menu-hamburger(aria-hidden='true', ng-click='toggleNavigation()')
 div.menu-wrapper
   nav.navbar
     ul.nav.navbar-nav
-      li
-        a(href='/read') Read
-      li
-        a(href='/learn') Learn
-      li
-        a(href='/about') About
-      li
-        a(href='/say-hi') Say hi
+      li(ng-repeat='item in navigation track by item.id')
+        a(ng-href='{{item.url}}', ng-class='{active : item.id === pageId}', ng-click='closeNavigation()') {{item.text}}

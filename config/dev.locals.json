@@ -13,10 +13,14 @@
       ".tmp/js/templates.js",
       ".tmp/js/app.js",
       ".tmp/js/constants.js",
-      ".tmp/js/jqueryFactory.js",
+      ".tmp/js/MessageFactory.js",
+      ".tmp/js/JqueryFactory.js",
+      ".tmp/js/ResizerFactory.js",
       ".tmp/js/MainController.js",
       ".tmp/js/HomeController.js",
-      ".tmp/js/siteHeaderDirective.js"
+      ".tmp/js/ReadController.js",
+      ".tmp/js/LearnController.js",
+      ".tmp/js/SiteHeaderDirective.js"
     ]
   },
   "styles" : [

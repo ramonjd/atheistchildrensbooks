@@ -1,9 +1,9 @@
 'use strict'
 angular.module('acb')
-.controller 'HomeController', [
+.controller 'LearnController', [
   '$scope'
   'MessageFactory'
   ($scope, MessageFactory)->
-    MessageFactory.set 'title', 'Home - Atheist Children\'s Books'
+    MessageFactory.set 'title', 'Learn - Atheist Children\'s Books'
     return
 ]

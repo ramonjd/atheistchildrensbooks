@@ -17,6 +17,18 @@ angular.module('acb', [
         title : 'Atheist Children\'s Books'
         pageId : 'home'
       })
+      $routeProvider.when('/read', {
+        templateUrl : 'templates/read.tpl.html'
+        controller: 'ReadController'
+        controllerAs: 'read'
+        pageId : 'read'
+      })
+      $routeProvider.when('/learn', {
+        templateUrl : 'templates/learn.tpl.html'
+        controller: 'LearnController'
+        controllerAs: 'learn'
+        pageId : 'learn'
+      })
       .otherwise({
           redirectTo : '/'
         })
@@ -30,7 +42,6 @@ angular.module('acb', [
     ($rootScope, $route) ->
       $rootScope.$on '$routeChangeSuccess', (newVal, oldVal)->
         if (oldVal != newVal)
-          document.title = $route.current.title
           $rootScope.pageId = $route.current.pageId
       return
     ])
