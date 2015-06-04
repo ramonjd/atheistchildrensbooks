@@ -29,6 +29,12 @@ angular.module('acb', [
         controllerAs: 'learn'
         pageId : 'learn'
       })
+      $routeProvider.when('/about', {
+        templateUrl : 'templates/about.tpl.html'
+        controller: 'AboutController'
+        controllerAs: 'about'
+        pageId : 'about'
+      })
       .otherwise({
           redirectTo : '/'
         })

@@ -20,6 +20,7 @@
       ".tmp/js/HomeController.js",
       ".tmp/js/ReadController.js",
       ".tmp/js/LearnController.js",
+      ".tmp/js/AboutController.js",
       ".tmp/js/SiteHeaderDirective.js"
     ]
   },
