@@ -14,12 +14,17 @@ angular.module('acb', [
         templateUrl : 'templates/home.tpl.html'
         controller: 'HomeController'
         controllerAs: 'home'
-        title : 'Atheist Children\'s Books'
         pageId : 'home'
       })
       $routeProvider.when('/read', {
         templateUrl : 'templates/read.tpl.html'
         controller: 'ReadController'
+        controllerAs: 'read'
+        pageId : 'read'
+      })
+      $routeProvider.when('/read/:title', {
+        templateUrl : 'templates/page.tpl.html'
+        controller: 'PageController'
         controllerAs: 'read'
         pageId : 'read'
       })
@@ -34,6 +39,12 @@ angular.module('acb', [
         controller: 'AboutController'
         controllerAs: 'about'
         pageId : 'about'
+      })
+      $routeProvider.when('/say-hi', {
+        templateUrl : 'templates/say-hi.tpl.html'
+        controller: 'SayHiController'
+        controllerAs: 'sayHi'
+        pageId : 'sayHi'
       })
       .otherwise({
           redirectTo : '/'

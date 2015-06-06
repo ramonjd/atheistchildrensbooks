@@ -5,9 +5,7 @@ html(lang='en', ng-app='acb', ng-controller='MainController')
   body(ng-class='{"menu-open shadow" : isMenuOpen, "loaded" : isPageLoaded}')
     div.stage(class='{{pageId}}')
       div(site-header)
-      main#main.view-animate-container
-        div.main-wrapper
-          div.view-animate(ng-view='', ng-cloak='')
+      div.view-animate(ng-view='', ng-cloak='')
       include ./includes/footer.jade
       div.loading(loader='', ng-class='{"loaded" : loadingFinished, "hide" : hideLoader}')
     if vendor

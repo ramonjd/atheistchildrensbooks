@@ -1,0 +1,47 @@
+.stage.home {
+  hr.crust {
+    border:0;
+    margin:0;
+    padding:0;
+    background: url(/img/crust-layer.png) repeat-x top left;
+    height:160px;
+    width:100%;
+  }
+
+  .content-layer-2,
+  footer{
+    background: url(/img/grass-bg.png);
+  }
+  .content-layer-3 {
+    color:white;
+    background-color: #4D2311;
+  }
+
+  .dinosaur {
+    width:200px;
+    height:300px;
+    position:relative;
+    cursor:pointer;
+    &:hover {
+      .skin {
+        opacity:1;
+      }
+      .bones {
+        opacity:0;
+      }
+    }
+    img {
+      position:absolute;
+      .transition(opacity .3s ease-in);
+    }
+    .skin {
+      opacity:0;
+    }
+    .bones {
+      opacity:1;
+    }
+  }
+
+
+
+}

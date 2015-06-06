@@ -1,59 +1,8 @@
 footer {
-  background: url(/img/grass-bg.png);
-}
-
-.read footer {
-  background: url(/img/sand-bg.png);
-}
-
-.learn footer {
-  background: url(/img/cloud-layer.png) repeat-x 0px -133px;
-  background-color: @bg-color;
-  .second-stratum {
-    background: 0;
-  }
-}
-
-footer {
-  section {
-    //padding:20px;
-    //background: rgba(151, 93, 41, 0.65);
-    //border-radius: 15px;
-  }
-  .first-stratum {
-    padding-bottom:75px;
-  }
-
-  .second-stratum {
-    background: url(/img/crust-layer.png) repeat-x top left;
-    padding-top:160px;
-    color:white;
-    background-color: #4D2311;
-    padding-bottom:100px;
-  }
-  .dinosaur {
-    width:200px;
-    height:300px;
-    position:relative;
-    cursor:pointer;
-    &:hover {
-      .skin {
-        opacity:1;
-      }
-      .bones {
-        opacity:0;
-      }
-    }
-    img {
-      position:absolute;
-      .transition(opacity .3s ease-in);
-    }
-    .skin {
-      opacity:0;
-    }
-    .bones {
-      opacity:1;
-    }
-  }
-
+  margin-top:-1px;
+  padding-top:50px;
+  padding-bottom:50px;
+  background: #000;
+  height:500px;
+  color: white;
 }

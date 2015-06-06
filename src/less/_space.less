@@ -1,0 +1,89 @@
+.stage.learn {
+  background-color: rgba(0, 0, 0, .87);
+  background-image: url(/img/stars.png);
+
+
+  .content-layer-1 {
+    padding-bottom:75px;
+    .container-fluid {
+      z-index: 2;
+      position: inherit;
+    }
+  }
+
+
+
+  .content-layer-2 {
+    padding-top:100px;
+    background: url(/img/cloud-layer.png) repeat-x 0px -133px;
+    background-color: @bg-color;
+  }
+
+footer {
+  background-color: @bg-color;
+}
+
+  .content-layer-1 .container-fluid{
+    color:white;
+  }
+}
+
+.planets {
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  display: none;
+  @media (min-width: @screen-sm-min) {
+    display:block;
+  }
+  .planet {
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-name: orbit;
+    position: absolute;
+    list-style: none;
+    &.one {
+      -webkit-animation-duration: 10s;
+      top: -358px;
+      right: -395px;
+      width: 800px;
+      height: 800px;
+    }
+    &.two {
+      -webkit-animation-duration: 8s;
+      top: -179px;
+      right: -185px;
+      width: 500px;
+      height: 500px;
+    }
+    &.three {
+      -webkit-animation-duration: 18s;
+      top: -391px;
+      right: -420px;
+      width: 950px;
+      height: 950px;
+    }
+    &.four {
+      -webkit-animation-duration: 5s;
+      top: -73px;
+      right: -68px;
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .sun {
+    position: absolute;
+    top: -16px;
+    right: -4px;
+  }
+}
+
+@-webkit-keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(360deg)
+  }
+}

@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Coming+Soon);
 
+
 ::-webkit-scrollbar {
   height: 12px;
   width: 9px;
@@ -51,6 +52,7 @@ h1, h2, h3, h4, h5, nav {
 
 h1 {
   font-size: 3rem;
+  margin-bottom:20px;
 }
 
 .invert {
@@ -78,18 +80,10 @@ h1 {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
-  &.learn {
-    background-color: rgba(0, 0, 0, .87);
-    background-image: url(/img/stars.png);
-
-
-
-  }
 }
 
 
 article {
-  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   .avery-sleep {
     width: 33%;
@@ -101,10 +95,13 @@ article {
 }
 
 main {
+  overflow:hidden;
+}
+
+.content-layer-1 {
   position:relative;
   padding-top:85px;
   padding-bottom:180px;
-  overflow:hidden;
   &.sea {
     padding-bottom: 0;
   }
@@ -118,28 +115,36 @@ main {
   @media (min-width: @screen-md-min) {
     padding-top:250px;
   }
-}
 
-.main-wrapper {
-  padding:30px 1%;
+  .container-fluid {
 
-  @media (min-width: @screen-sm-min) {
-    padding-bottom:120px;
+    @media (min-width: @screen-sm-min) {
+      padding-bottom:120px;
+    }
+    @media (min-width: @screen-md-min) {
+      padding-bottom:200px;
+
+    }
   }
-  @media (min-width: @screen-md-min) {
-    padding-bottom:200px;
+}
 
+.content-layer-2 {
+  padding-bottom:75px;
+}
+.content-layer-3 {
+  padding-bottom:100px;
+}
+
+
+.stratum {
+  .row:before,
+  .row:after,
+  .container-fluid:before,
+  .container-fluid:after{
+    margin-top: -1px;
   }
 }
 
-.read .main-wrapper {
-  padding:30px 1%;
-  background-color:#B9F0FE;
-}
-
-.learn .main-wrapper {
-  color:white;
-}
 
 .cloud-layer {
   background: url(/img/cloud-layer.png) repeat-x bottom left;
@@ -151,8 +156,6 @@ main {
   left:0;
   .transition(all .1s ease-out);
 }
-
-
 .sand,
 .grass {
   background: url(/img/grass.png) repeat-x bottom left;
@@ -165,6 +168,7 @@ main {
 }
 .sand {
   background: url(/img/sand.png) repeat-x top left;
+  height: 90px;
 }
 .waves {
   background: url(/img/waves.png) repeat-x top left;
@@ -182,22 +186,22 @@ main {
   }
 
 }
-  .hills {
+
+.hills {
   background: url(/img/bg-hills.png) repeat-x bottom left;
   position: absolute;
   bottom: 20px;
   left: 0;
-    width: 130%;
-    height: 200px;
-    z-index:0;
-    -webkit-background-size: 100% 406px;
-    background-size: 100% 406px;
-    background-position: center;
-    @media (min-width: @screen-md-min) {
+  width: 130%;
+  height: 200px;
+  z-index:0;
+  -webkit-background-size: 100% 406px;
+  background-size: 100% 406px;
+  background-position: center;
+  @media (min-width: @screen-md-min) {
 
-    }
   }
-
+}
 
 .tree-lg {
   position: absolute;
@@ -240,58 +244,6 @@ z-index:30;
     }
   }
 }
-
-
-.planets {
-  right: 0;
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  @media (min-width: @screen-sm-min) {
-    display:block;
-  }
-  .planet {
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-name: orbit;
-    position: absolute;
-    list-style: none;
-    &.one {
-      -webkit-animation-duration: 10s;
-      top: -358px;
-      right: -395px;
-      width: 800px;
-      height: 800px;
-    }
-    &.two {
-      -webkit-animation-duration: 8s;
-      top: -179px;
-      right: -185px;
-      width: 500px;
-      height: 500px;
-    }
-    &.three {
-      -webkit-animation-duration: 18s;
-      top: -391px;
-      right: -420px;
-      width: 950px;
-      height: 950px;
-    }
-    &.four {
-      -webkit-animation-duration: 5s;
-      top: -73px;
-      right: -68px;
-      width: 300px;
-      height: 300px;
-    }
-  }
-  .sun {
-    position: absolute;
-    top: -16px;
-    right: -4px;
-  }
-}
-
 
 .book {
   overflow:hidden;
@@ -382,44 +334,3 @@ z-index:30;
   border-radius: 6px;
 }
 
-// animations
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
-
-.lightSpeedIn {
-  -webkit-animation-name: lightSpeedIn;
-    animation-name: lightSpeedIn;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out
-  }
-
-.bounceIn {
-  -webkit-animation-name: bounceIn;
-  animation-name: bounceIn;
-  -webkit-animation-duration: .75s;
-  animation-duration: .75s
-}
-
-.shake {
-  -webkit-animation-name: shake;
-  animation-name: shake
-}
-
-.zoomInDown {
-  -webkit-animation-name: zoomInDown;
-  animation-name: zoomInDown
-}
