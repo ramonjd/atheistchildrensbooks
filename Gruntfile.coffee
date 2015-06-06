@@ -14,6 +14,13 @@ module.exports = (grunt)->
   mountFolder = (connect, dir) ->
     connect.static(require('path').resolve(dir))
 
+  # custom functions
+  createImgJSON = ()->
+    imgs = []
+    grunt.file.recurse 'src/img/', (abspath, rootdir, subdir, filename)->
+      imgs.push '/img/' + filename
+    imgs
+
   grunt.initConfig(
     pkg: grunt.file.readJSON('package.json')
   #
@@ -174,11 +181,13 @@ module.exports = (grunt)->
           ENV:
             BASE: 'http://localhost:8080'
             URLS: apiPaths
+          IMGS: createImgJSON()
       dist:
         constants:
           ENV:
             BASE: 'http://atheistchildrensbooks.org'
             URLS: apiPaths
+          IMGS: createImgJSON()
     uglify:
       options:
         mangle: false
@@ -200,19 +209,6 @@ module.exports = (grunt)->
         files: 'src/less/*.less'
         tasks: ['less:dev']
   )
-
-  #
-  # custom tasks
-  #
-  grunt.registerTask 'createImgJs', 'recurse through img dir', ()->
-    imgs = []
-    dest = '.tmp/js/preloaderAssets.js'
-    contents = 'var acbPreloaderAssets=['
-    grunt.file.recurse 'src/img/', (abspath, rootdir, subdir, filename)->
-      imgs.push '\'/img/' + filename + '\''
-    contents += imgs + '];'
-    grunt.file.write dest, contents
-    console.log(dest + ' created')
 
   #
   # load modules

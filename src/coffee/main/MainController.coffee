@@ -2,10 +2,11 @@
 angular.module('acb')
 .controller 'MainController', [
   '$scope'
-  'MessageFactory'
   'ResizerFactory'
-  ($scope, MessageFactory, ResizerFactory)->
-    MessageFactory.set 'navigation', [
+  'LoaderFactory'
+  '$timeout'
+  ($scope, ResizerFactory, LoaderFactory, $timeout)->
+    $scope.navigation = [
       {
         url : '/read'
         text : 'Read'
@@ -37,6 +38,28 @@ angular.module('acb')
       $scope.isMenuOpen = false
 
     ResizerFactory.add $scope.closeNavigation
+
+    finishLoading = ->
+      $scope.loadingFinished = true
+      $timeout ()->
+        $scope.hideLoader = true
+        $scope.showSiteHeader = true
+        $timeout ()->
+          $scope.isPageLoaded = true
+          return
+        , 1250
+        return
+      , 750
+
+
+    LoaderFactory.load {
+      onStep: (Percent)->
+        $timeout ()->
+          $scope.percentageComplete = Percent
+        return
+      onComplete: ()->
+        finishLoading()
+    }
 
     return
 ]
