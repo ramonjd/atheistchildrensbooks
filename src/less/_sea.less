@@ -14,6 +14,13 @@
 
 
   .media-list {
+
+    .media-left {
+      display:block;
+      @media (min-width: @screen-xs-min) {
+        display: table-cell;
+      }
+    }
     .media-object {
       max-width: 150px;
     }
