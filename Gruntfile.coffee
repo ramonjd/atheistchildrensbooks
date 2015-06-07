@@ -171,7 +171,7 @@ module.exports = (grunt)->
         options:
           compress: true
         files:
-          'dist/css/base.min.css' : 'src/less/base.less'
+          'dist/css/base.min.css' : 'src/less/styles.less'
     ngconstant:
       options:
         name: 'acb.constants'
