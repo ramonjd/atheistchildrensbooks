@@ -3,5 +3,5 @@ div.menu-title
 div.menu-wrapper
   nav.navbar
     ul.nav.navbar-nav
-      li(ng-repeat='item in navigation track by item.id')
-        a(ng-href='{{item.url}}', ng-class='{active : item.id === pageId}', ng-click='closeNavigation()') {{item.text}}
+      li(ng-repeat='item in navigation track by item.id', ng-class='{active : item.id === pageId}')
+        a(ng-href='{{item.url}}', ng-click='closeNavigation()') {{item.text}}
