@@ -36,34 +36,34 @@ footer {
     display:block;
   }
   .planet {
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-name: orbit;
+    .lh-animation-iteration-count(infinite);
+    .lh-animation-timing-function(linear);
+    .lh-animation-name(orbit);
     position: absolute;
     list-style: none;
     &.one {
-      -webkit-animation-duration: 10s;
+      .lh-animation-duration(10s);
       top: -358px;
       right: -395px;
       width: 800px;
       height: 800px;
     }
     &.two {
-      -webkit-animation-duration: 8s;
+      .lh-animation-duration(8s);
       top: -179px;
       right: -185px;
       width: 500px;
       height: 500px;
     }
     &.three {
-      -webkit-animation-duration: 18s;
+      .lh-animation-duration(18s);
       top: -391px;
       right: -420px;
       width: 950px;
       height: 950px;
     }
     &.four {
-      -webkit-animation-duration: 5s;
+      .lh-animation-duration(5s);
       top: -73px;
       right: -68px;
       width: 300px;
@@ -77,11 +77,5 @@ footer {
   }
 }
 
-@-webkit-keyframes orbit {
-  from {
-    -webkit-transform: rotate(0deg)
-  }
-  to {
-    -webkit-transform: rotate(360deg)
-  }
-}
+.lh-keyframes(~'orbit, from{ transform: rotate(0deg) } to{  transform: rotate(360deg) }');
+

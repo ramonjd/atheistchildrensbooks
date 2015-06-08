@@ -39,9 +39,7 @@ html {
   margin: 0;
   overflow: hidden;
   background-color: @bg-color;
-  -webkit-transition: background .5s;
-  -moz-transition: background .5s;
-  transition: background .5s;
+  .lh-transition(background .5s);
   -webkit-font-smoothing: antialiased;
   font-family: 'Coming Soon', cursive;
 }
@@ -75,10 +73,8 @@ h1 {
     background: rgba(0, 0, 0, 0.3);
     content: '';
     opacity: 0;
-    -webkit-transition: opacity 0.3s, -webkit-transform 0s 0.3s;
-    transition: opacity 0.3s, transform 0s 0.3s;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+    .lh-transition(opacity 0.3s, transform 0s 0.3s);
+    .lh-transform(translate3d(100%, 0, 0));
   }
 }
 
@@ -153,7 +149,7 @@ main {
   position:absolute;
   bottom:-80px;
   left:0;
-  .transition(all .1s ease-out);
+  .lh-transition(all .1s ease-out);
 }
 .sand,
 .grass {
@@ -194,8 +190,7 @@ main {
   width: 130%;
   height: 200px;
   z-index:0;
-  -webkit-background-size: 100% 406px;
-  background-size: 100% 406px;
+  .lh-background-size(100% 406px);
   background-position: center;
   @media (min-width: @screen-md-min) {
 
@@ -269,7 +264,7 @@ main {
     color:black;
     font-size: 1rem;
     font-weight: bold;
-    .transition(all .25s ease-out);
+    .lh-transition(all .25s ease-out);
   }
 
   figcaption {
@@ -297,7 +292,7 @@ main {
   right: 0;
   z-index:30;
   cursor: pointer;
-  .transition(all 0.3s);
+  .lh-transition(all 0.3s);
   display:none;
   @media (min-width: @screen-sm-min) {
     display:block;
@@ -310,10 +305,7 @@ main {
   }
   &:hover {
     bottom: 75px;
-    -webkit-animation: chew 1s steps(6) infinite;
-    -moz-animation: chew 1s steps(6) infinite;
-    -ms-animation: chew 1s steps(6) infinite;
-    -o-animation: chew 1s steps(6) infinite;
+    .lh-animation(chew 1s steps(6) infinite);
   }
 }
 

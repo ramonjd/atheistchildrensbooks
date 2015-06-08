@@ -20,7 +20,8 @@
     "angular-sanitize": "~1.4.0",
     "angular-route": "~1.4.0",
     "jquery": "~2.1.4",
-    "velocity": "~1.2.2"
+    "velocity": "~1.2.2",
+    "lesshat": "~3.0.2"
   },
   "devDependencies": {}
 }

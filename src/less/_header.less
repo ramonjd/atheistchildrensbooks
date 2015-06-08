@@ -32,7 +32,7 @@ header {
     width: 100%;
     top:20px;
     left:0px;
-    .transition(top .2s ease-in-out);
+    .lh-transition(top .2s ease-in-out);
     span {
       text-indent: -9999px;
       display: block;
@@ -129,7 +129,7 @@ header {
     z-index: 8;
     width: 135px;
     display:none;
-    .transition(all .25s ease-out);
+    .lh-transition(all .25s ease-out);
     @media (min-width: @screen-md-min) {
       display:block;
       width: 170px;
@@ -151,17 +151,9 @@ header {
         }
       }
       &.rays {
-        -webkit-animation: ray-rotation 30s infinite linear;
-        -moz-animation: ray-rotation 30s infinite linear;
-        animation: ray-rotation 30s infinite linear;
-        -webkit-transition: .78s;
-        -moz-transition: .78s;
-        transition: .78s;
-        -webkit-transform-origin: 50% 50%;
-        -moz-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-        -o-transform-origin: 50% 50%;
-        transform-origin: 50% 50%
+        .lh-animation(ray-rotation 30s infinite linear);
+        .lh-transition(.78s);
+        .lh-transform-origin(50% 50%);
       }
     }
   }
@@ -199,8 +191,8 @@ header {
   }
   &:hover {
     .question {
-      .scale(1.2);
-      .rotate(25)
+      .lh-scale(1.2);
+      .lh-rotate(25)
     }
   }
 
@@ -209,7 +201,7 @@ header {
     top: 20px;
     right: 32px;
     &.question {
-      .transition(all .2s ease-in-out);
+      .lh-transition(all .2s ease-in-out);
       width: 100px;
     }
     &.balloon {
@@ -218,10 +210,8 @@ header {
       width: 168px;
       @media (min-width: @screen-md-min) {
         right: -2px;
-        -moz-animation: 3s ease 0s normal none infinite swing;
-        -moz-transform-origin: center top;
-        -webkit-animation: swing 3s infinite ease-in-out;
-        -webkit-transform-origin: top;
+        .lh-animation(swing 3s infinite ease-in-out);
+        .lh-transform-origin(top);
       }
     }
   }
