@@ -7,14 +7,16 @@
   .content-layer-1  {
     padding-bottom: 75px;
     .container-fluid {
-      z-index: 2;
       background-color:#B9F0FE;
+    }
+    .row {
+      z-index: 2;
+      position:relative;
     }
   }
 
 
   .media-list {
-
     .media-left {
       display:block;
       @media (min-width: @screen-xs-min) {
@@ -30,7 +32,34 @@
       }
     }
   }
-
+  .waves,
+  .waves-opaque {
+    background: url(/img/waves.png) repeat-x top left;
+    position: absolute;
+    top:15px;
+    z-index: 0;
+    height:80px;
+    width: 130%;
+    left: 0;
+    @media (min-width: @screen-sm-min) {
+      top:50px;
+    }
+    @media (min-width: @screen-md-min) {
+      top:185px;
+    }
+  }
+  .waves-opaque {
+    width:300px;
+    left:auto;
+    right:0;
+    top: 166px;
+    z-index:51;
+    .lh-opacity(0.7);
+    display: none;
+    @media (min-width: @screen-md-min) {
+      display: block;
+    }
+  }
   .anchor {
     position:absolute;
     bottom:3px;
@@ -76,5 +105,26 @@
     }
   }
 
+  .questions-corner {
+    width:315px;
+    top:30px;
+  }
+
+  .sea-mist {
+    position:absolute;
+    z-index: 0;
+    width:75%;
+    bottom:15%;
+    left:20%;
+    .lh-opacity(.3);
+    &.two {
+      bottom:35%;
+      left:45%;
+    }
+    &.three {
+      bottom:65%;
+      left:8%;
+    }
+  }
 }
 

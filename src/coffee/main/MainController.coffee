@@ -6,6 +6,7 @@ angular.module('acb')
   'LoaderFactory'
   '$timeout'
   ($scope, ResizerFactory, LoaderFactory, $timeout)->
+
     $scope.navigation = [
       {
         url : '/'
@@ -55,7 +56,6 @@ angular.module('acb')
         , 1250
         return
       , 750
-
 
     LoaderFactory.load {
       onStep: (Percent)->

@@ -2,10 +2,10 @@ header
   div.logo
     a.logo-wrapper(href='/')
       img(class='atheist', src='/img/atheist.png', alt='atheist')
-      img(class='childrens', src='/img/childrens.png', alt='childrens')
+      img(class='childrens', src='/img/childrens.png', alt='children\'s')
       img(class='books', src='/img/books.png', alt='books')
       span
-        Atheist Childrens' Books
+        Atheist Children's Books
     div.cloud
       img(src='/img/cloud.png', alt='cloud')
     div.sun
@@ -17,11 +17,9 @@ header
     div.bg-clouds
       img(src='/img/bg-clouds.png', alt='clouds')
   div.questions-corner
-    case page
-      when 'read'
-        div.wrapper
-          img(class='boat', src='/img/boat.png', alt='boat')
-      default
-        div.wrapper
-          img(class='balloon', src = '/img/balloon.png', alt = 'balloon')
+    div.wrapper
+      img(class='balloon', src = '/img/balloon.png', alt = 'balloon', ng-if='showBalloon')
+      img(class='boat', src='/img/boat.png', alt='boat', ng-if='showBoat')
+      div(class='waves-opaque', ng-if='showBoat')
+
   include ../includes/nav

@@ -79,6 +79,11 @@ h1 {
 }
 
 
+main {
+  overflow:hidden;
+}
+
+
 article {
   padding: 20px;
   .avery-sleep {
@@ -89,9 +94,10 @@ article {
     }
   }
 }
-
-main {
-  overflow:hidden;
+.content-cell {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
 }
 
 .content-layer-1 {
@@ -165,22 +171,7 @@ main {
   background: url(/img/sand.png) repeat-x top left;
   height: 90px;
 }
-.waves {
-  background: url(/img/waves.png) repeat-x top left;
-  position: absolute;
-  top:15px;
-  z-index: 0;
-  height:80px;
-  width: 130%;
-  left: 0;
-  @media (min-width: @screen-sm-min) {
-    top:50px;
-  }
-  @media (min-width: @screen-md-min) {
-    top:185px;
-  }
 
-}
 
 .hills {
   background: url(/img/bg-hills.png) repeat-x bottom left;
@@ -309,9 +300,7 @@ main {
   }
 }
 
-.content-cell {
-  background: #fff;
-  padding: 20px;
-  border-radius: 6px;
-}
+
+
+
 

@@ -60,5 +60,7 @@ angular.module('acb', [
       $rootScope.$on '$routeChangeSuccess', (newVal, oldVal)->
         if (oldVal != newVal)
           $rootScope.pageId = $route.current.pageId
+          $rootScope.showBalloon = $route.current.pageId is 'home'
+          $rootScope.showBoat = $route.current.pageId is 'read'
       return
     ])
