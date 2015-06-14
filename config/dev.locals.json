@@ -25,9 +25,8 @@
       ".tmp/js/HomeController.js",
       ".tmp/js/ReadController.js",
       ".tmp/js/PageController.js",
-      ".tmp/js/LearnController.js",
       ".tmp/js/AboutController.js",
-      ".tmp/js/SayHiController.js",
+      ".tmp/js/guessAGodDirective.js",
       ".tmp/js/SiteHeaderDirective.js",
       ".tmp/js/fishSchoolDirective.js"
     ]

@@ -1,13 +1,13 @@
-.stage.learn {
+.stage.about {
   background-color: rgba(0, 0, 0, .87);
   background-image: url(/img/stars.png);
 
 
   .content-layer-1 {
     padding-bottom:75px;
-    .container-fluid {
+    .row {
       z-index: 2;
-      position: inherit;
+      position:relative;
     }
   }
 
@@ -17,12 +17,31 @@
     background-color: @bg-color;
   }
 
-footer {
-  background-color: @bg-color;
-}
+  footer {
+    background-color: @bg-color;
+  }
 
   .content-layer-1 .container-fluid{
     color:white;
+  }
+  .spaceship {
+    position: absolute;
+    z-index: 11;
+    top:-9999px;
+    width:0;
+    @media (min-width: @screen-sm-min) {
+      top: 47px;
+      left: 199px;
+      width: 129px;
+    }
+    @media (min-width: @screen-md-min) {
+      top: 68px;
+      left: 216px;
+      width: 200px;
+    }
+    img {
+      max-width: 100%
+    }
   }
 }
 
@@ -42,28 +61,28 @@ footer {
     position: absolute;
     list-style: none;
     &.one {
-      .lh-animation-duration(10s);
+      .lh-animation-duration(15s);
       top: -358px;
       right: -395px;
       width: 800px;
       height: 800px;
     }
     &.two {
-      .lh-animation-duration(8s);
+      .lh-animation-duration(12s);
       top: -179px;
       right: -185px;
       width: 500px;
       height: 500px;
     }
     &.three {
-      .lh-animation-duration(18s);
+      .lh-animation-duration(24s);
       top: -391px;
       right: -420px;
       width: 950px;
       height: 950px;
     }
     &.four {
-      .lh-animation-duration(5s);
+      .lh-animation-duration(8s);
       top: -73px;
       right: -68px;
       width: 300px;

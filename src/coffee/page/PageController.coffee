@@ -5,7 +5,7 @@ angular.module('acb')
   'MessageFactory'
   '$routeParams'
   ($scope, MessageFactory, $routeParams)->
-    MessageFactory.set 'title', 'Book title - Read - Atheist Children\'s Books'
-    console.log $routeParams
+    MessageFactory.set 'title', $routeParams.title + ' - Read - Atheist Children\'s Books'
+    $scope.pageTitle = $routeParams.title
     return
 ]

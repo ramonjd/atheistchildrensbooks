@@ -9,10 +9,10 @@ header
     div.cloud
       img(src='/img/cloud.png', alt='cloud')
     div.sun
-      div.wrapper
+      div.wrapper(ng-if='showSun')
         img(class='centre', src='/img/sun-centre.png', alt='sun')
         img(class='rays', src='/img/sun-rays.png', alt='sun rays')
-    div.spaceship
+    div.spaceship(ng-if='showSpaceShip')
       img(src='/img/spaceship.png', alt='spaceship')
     div.bg-clouds
       img(src='/img/bg-clouds.png', alt='clouds')

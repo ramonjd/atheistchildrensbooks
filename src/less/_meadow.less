@@ -9,7 +9,10 @@
     height:160px;
     width:100%;
   }
-
+  .row {
+    z-index: 2;
+    position:relative;
+  }
   .content-layer-2
   {
     background: url(/img/grass-bg.png);
@@ -45,6 +48,22 @@
     }
   }
 
-
+  .distant-cloud {
+    position:absolute;
+    z-index: 0;
+    width: 37%;
+    height: 17%;
+    bottom:15%;
+    left:20%;
+    .lh-opacity(.3);
+    &.two {
+      bottom:35%;
+      left:45%;
+    }
+    &.three {
+      bottom:65%;
+      left:8%;
+    }
+  }
 
 }

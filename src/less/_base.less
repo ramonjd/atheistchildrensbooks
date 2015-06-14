@@ -46,11 +46,20 @@ html {
 h1, h2, h3, h4, h5, nav {
   text-transform: uppercase;
   font-weight:700;
+  small {
+    color:#222;
+  }
 }
 
 h1 {
   font-size: 3rem;
   margin-bottom:20px;
+}
+
+dl {
+  dd {
+    margin-bottom:20px;
+  }
 }
 
 .invert {
@@ -83,7 +92,6 @@ main {
   overflow:hidden;
 }
 
-
 article {
   padding: 20px;
   .avery-sleep {
@@ -94,32 +102,41 @@ article {
     }
   }
 }
+
 .content-cell {
   background: #fff;
   padding: 20px;
   border-radius: 6px;
 }
 
+.content-cell,
+.book {
+  margin-bottom:20px;
+  @media (min-width: @screen-md-min) {
+    margin-bottom:0;
+  }
+}
+
 .content-layer-1 {
   position:relative;
-  padding-top:85px;
+  padding-top:105px;
   padding-bottom:180px;
   &.sea {
     padding-bottom: 0;
   }
-  .row {
-    margin-bottom:20px;
-  }
-
   @media (min-width: @screen-sm-min) {
-    padding-top:120px;
+    padding-top:140px;
   }
   @media (min-width: @screen-md-min) {
     padding-top:250px;
   }
-
+  .row {
+    margin-bottom:0;
+    @media (min-width: @screen-md-min) {
+      margin-bottom:20px;
+    }
+  }
   .container-fluid {
-
     @media (min-width: @screen-sm-min) {
       padding-bottom:120px;
     }
@@ -132,6 +149,12 @@ article {
 
 .content-layer-2 {
   padding-bottom:75px;
+  .row {
+    margin-bottom:0;
+    @media (min-width: @screen-md-min) {
+      margin-bottom:20px;
+    }
+  }
 }
 .content-layer-3 {
   padding-bottom:100px;

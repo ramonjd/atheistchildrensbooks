@@ -19,19 +19,9 @@ angular.module('acb')
         id : 'read'
       }
       {
-        url : '/learn'
-        text : 'Learn'
-        id : 'learn'
-      }
-      {
         url : '/about'
         text : 'About'
         id : 'about'
-      }
-      {
-        url : '/say-hi'
-        text : 'Say hi'
-        id : 'sayHi'
       }
     ]
 

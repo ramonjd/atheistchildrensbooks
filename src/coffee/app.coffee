@@ -28,12 +28,6 @@ angular.module('acb', [
         controllerAs: 'read'
         pageId : 'read'
       })
-      $routeProvider.when('/learn', {
-        templateUrl : 'templates/learn.tpl.html'
-        controller: 'LearnController'
-        controllerAs: 'learn'
-        pageId : 'learn'
-      })
       $routeProvider.when('/about', {
         templateUrl : 'templates/about.tpl.html'
         controller: 'AboutController'
@@ -61,6 +55,8 @@ angular.module('acb', [
         if (oldVal != newVal)
           $rootScope.pageId = $route.current.pageId
           $rootScope.showBalloon = $route.current.pageId is 'home'
+          $rootScope.showSun = (/home|read|sayHi/).test $route.current.pageId
           $rootScope.showBoat = $route.current.pageId is 'read'
+          $rootScope.showSpaceShip = $route.current.pageId is 'about'
       return
     ])

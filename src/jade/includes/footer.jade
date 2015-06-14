@@ -1,9 +1,20 @@
 footer.container-fluid
   div.container-fluid
     div.row
-      div.col-md-4
-        p Atheist Children's Books
-        p #{new Date().getFullYear()}
-      div.col-md-4
-      div.col-md-4
-
+      div.col-md-12.contact
+        h2 Wanna get involved? Or just say hi?
+        p If you want to know more about why we need more sites like this, or want to contribute, or you just love books, please get in touch!
+        p To all the authors - if you want to promote your book, do the same.
+        p
+          strong All nicies no bities.
+        p
+          a.btn.btn-default.btn-lg(href='mailto:atheistchildrensbooks@gmail.com')
+            span.glyphicon.glyphicon-envelope(aria-hidden='true')
+            span.text &nbsp; Have faith in email!
+    div.row
+      nav
+        ul.nav.nav-pills
+          li &copy; Atheist Children's Books
+              span &nbsp; #{new Date().getFullYear()}
+          li(role='presentation', ng-repeat='item in navigation track by item.id', ng-class='{active : item.id === pageId}')
+            a(ng-href='{{item.url}}', ng-click='closeNavigation()') {{item.text}}
