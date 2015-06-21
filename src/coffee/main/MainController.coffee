@@ -23,6 +23,11 @@ angular.module('acb')
         text : 'About'
         id : 'about'
       }
+      {
+        url : '/blog'
+        text : 'Blog'
+        id : 'blog'
+      }
     ]
 
     $scope.isMenuOpen = false

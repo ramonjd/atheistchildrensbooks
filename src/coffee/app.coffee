@@ -40,6 +40,18 @@ angular.module('acb', [
         controllerAs: 'sayHi'
         pageId : 'sayHi'
       })
+      $routeProvider.when('/blog', {
+        templateUrl : 'templates/blog.tpl.html'
+        controller: 'BlogController'
+        controllerAs: 'blog'
+        pageId : 'blog'
+      })
+      $routeProvider.when('/blog/:post', {
+        templateUrl : 'templates/blog.tpl.html'
+        controller: 'BlogController'
+        controllerAs: 'blog'
+        pageId : 'blog'
+      })
       .otherwise({
           redirectTo : '/'
         })

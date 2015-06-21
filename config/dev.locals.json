@@ -25,6 +25,7 @@
       ".tmp/js/HomeController.js",
       ".tmp/js/ReadController.js",
       ".tmp/js/PageController.js",
+      ".tmp/js/BlogController.js",
       ".tmp/js/AboutController.js",
       ".tmp/js/guessAGodDirective.js",
       ".tmp/js/SiteHeaderDirective.js",
