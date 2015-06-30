@@ -71,3 +71,12 @@
   }
 }
 
+.modal {
+  color:black;
+  display: block;
+  z-index: -100;
+  .lh-transition(opacity 0.3s 0.3s);
+  &.in {
+    z-index: 1050;
+  }
+}

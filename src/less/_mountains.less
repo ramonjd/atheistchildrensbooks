@@ -6,11 +6,15 @@
   .mountains {
     background: url(/img/mountains.png) repeat-x top left;
     position: absolute;
-    top:25px;
+    top:-125px;
     z-index: 0;
     height:400px;
     left: 0;
     width:130%;
+    .lh-transition(top .3s ease-in);
+    @media (min-width: @screen-md-min) {
+      top:-50px;
+    }
   }
 
   .content-layer-1,

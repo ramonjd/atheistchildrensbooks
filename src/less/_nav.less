@@ -13,6 +13,7 @@ header {
     vertical-align: middle;
     text-align: center;
     overflow: hidden;
+    color:black;
     &:hover {
       .lh-opacity(0.6);
     }
@@ -123,23 +124,22 @@ header {
       height: auto;
     }
   }
+}
 
-  /* Shown menu */
-  .menu-open {
-    .menu-wrapper {
-      width: 280px;
-      height: 340px;
-      .lh-animation(anim-jelly 0.8s linear forwards);
-      li.active,
-      li:hover {
-        background-color: #999;
-      }
-      nav {
-        opacity: 1;
-        .lh-transition(opacity 0.3s 0.3s);
-      }
+/* Shown menu */
+.menu-open {
+  .menu-wrapper {
+    width: 280px;
+    height: 280px;
+    .lh-animation(anim-jelly 0.8s linear forwards);
+    li.active,
+    li:hover {
+      background-color: #999;
     }
-
+    nav {
+      opacity: 1;
+      .lh-transition(opacity 0.3s 0.3s);
+    }
   }
 }
 

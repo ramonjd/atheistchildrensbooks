@@ -30,6 +30,9 @@ angular.module('acb')
       }
     ]
 
+
+
+
     $scope.isMenuOpen = false
 
     $scope.toggleNavigation = ->
@@ -47,6 +50,7 @@ angular.module('acb')
         $scope.showSiteHeader = true
         $timeout ()->
           $scope.isPageLoaded = true
+          $scope.isModalBoxOpen = true
           return
         , 1250
         return

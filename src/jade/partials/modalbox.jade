@@ -1,0 +1,16 @@
+.modal.fade(ng-class='{"in" : isModalBoxOpen == true, "out" : isModalBoxOpen == false}')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        //button.close(type='button', data-dismiss='modal', aria-label='Close', ng-click='closeModal()')
+          //span(aria-hidden='true') ×
+        h4.modal-title Atheist Children's Books is under developement
+      .modal-body
+        p
+          strong Thanks for visiting :)
+          |  I'm currently working hard to get ACB looking and working a treat.
+        p
+          | Like to help or donate? Please
+          a(href='mailto:atheistchildrensbooks@gmail.com') &nbsp; get in touch.
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal', ng-click='closeModal()') Ok I got it!

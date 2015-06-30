@@ -28,6 +28,7 @@
       ".tmp/js/BlogController.js",
       ".tmp/js/AboutController.js",
       ".tmp/js/guessAGodDirective.js",
+      ".tmp/js/modalBoxDirective.js",
       ".tmp/js/SiteHeaderDirective.js",
       ".tmp/js/fishSchoolDirective.js"
     ]
