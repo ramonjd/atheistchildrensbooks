@@ -46,10 +46,10 @@ angular.module('acb', [
         controllerAs: 'blog'
         pageId : 'blog'
       })
-      $routeProvider.when('/blog/:post', {
-        templateUrl : 'templates/blog.tpl.html'
-        controller: 'BlogController'
-        controllerAs: 'blog'
+      $routeProvider.when('/blog/:postId', {
+        templateUrl : 'templates/blogPage.tpl.html'
+        controller: 'BlogPageController'
+        controllerAs: 'blogPage'
         pageId : 'blog'
       })
       .otherwise({

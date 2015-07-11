@@ -1,0 +1,259 @@
+[
+  {
+    "ID": 17,
+    "title": "Test review post",
+    "status": "publish",
+    "type": "post",
+    "author": {
+      "ID": 1,
+      "username": "atheistchildrensbooks",
+      "name": "atheistchildrensbooks",
+      "first_name": "",
+      "last_name": "",
+      "nickname": "atheistchildrensbooks",
+      "slug": "atheistchildrensbooks",
+      "URL": "",
+      "avatar": "",
+      "description": "",
+      "registered": "2015-06-17T19:09:25+00:00",
+      "meta": {
+        "links": {
+          "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/users\/1",
+          "archives": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/users\/1\/posts"
+        }
+      }
+    },
+    "content": "<p>Sorry! Not much here.<\/p>\n",
+    "parent": null,
+    "link": "http:\/\/atheistchildrensbooks.org\/wordpress\/test-review-post\/",
+    "date": "2015-07-11T21:24:55",
+    "modified": "2015-07-11T21:24:55",
+    "format": "standard",
+    "slug": "test-review-post",
+    "guid": "http:\/\/atheistchildrensbooks.org\/wordpress\/?p=17",
+    "excerpt": "<p>Sorry! Not much here.<\/p>\n",
+    "menu_order": 0,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "date_tz": "UTC",
+    "date_gmt": "2015-07-11T21:24:55",
+    "modified_tz": "UTC",
+    "modified_gmt": "2015-07-11T21:24:55",
+    "meta": {
+      "links": {
+        "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/posts\/17",
+        "author": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/users\/1",
+        "collection": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/posts",
+        "replies": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/posts\/17\/comments",
+        "version-history": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/posts\/17\/revisions"
+      }
+    },
+    "featured_image": {
+      "ID": 18,
+      "title": "book-cover",
+      "status": "inherit",
+      "type": "attachment",
+      "author": {
+        "ID": 1,
+        "username": "atheistchildrensbooks",
+        "name": "atheistchildrensbooks",
+        "first_name": "",
+        "last_name": "",
+        "nickname": "atheistchildrensbooks",
+        "slug": "atheistchildrensbooks",
+        "URL": "",
+        "avatar": "",
+        "description": "",
+        "registered": "2015-06-17T19:09:25+00:00",
+        "meta": {
+          "links": {
+            "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/users\/1",
+            "archives": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/users\/1\/posts"
+          }
+        }
+      },
+      "content": "<p class=\"attachment\"><a href='http:\/\/atheistchildrensbooks.org\/wordpress\/wp-content\/uploads\/book-cover.png'><img width=\"280\" height=\"280\" src=\"http:\/\/atheistchildrensbooks.org\/wordpress\/wp-content\/uploads\/book-cover.png\" class=\"attachment-medium\" alt=\"book-cover\" \/><\/a><\/p>\n",
+      "parent": 17,
+      "link": "http:\/\/atheistchildrensbooks.org\/wordpress\/test-review-post\/book-cover\/",
+      "date": "2015-07-11T21:24:09",
+      "modified": "2015-07-11T21:24:09",
+      "format": "standard",
+      "slug": "book-cover",
+      "guid": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-content\/uploads\/book-cover.png",
+      "excerpt": null,
+      "menu_order": 0,
+      "comment_status": "open",
+      "ping_status": "open",
+      "sticky": false,
+      "date_tz": "UTC",
+      "date_gmt": "2015-07-11T21:24:09",
+      "modified_tz": "UTC",
+      "modified_gmt": "2015-07-11T21:24:09",
+      "meta": {
+        "links": {
+          "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/media\/18",
+          "author": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/users\/1",
+          "collection": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/media",
+          "replies": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/media\/18\/comments",
+          "version-history": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/media\/18\/revisions",
+          "up": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/media\/17"
+        }
+      },
+      "terms": [],
+      "source": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-content\/uploads\/book-cover.png",
+      "is_image": true,
+      "attachment_meta": {
+        "width": 280,
+        "height": 280,
+        "file": "book-cover.png",
+        "sizes": {
+          "thumbnail": {
+            "file": "book-cover-150x150.png",
+            "width": 150,
+            "height": 150,
+            "mime-type": "image\/png",
+            "url": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-content\/uploads\/book-cover-150x150.png"
+          }
+        },
+        "image_meta": {
+          "aperture": 0,
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": 0,
+          "copyright": "",
+          "focal_length": 0,
+          "iso": 0,
+          "shutter_speed": 0,
+          "title": "",
+          "orientation": 0
+        }
+      }
+    },
+    "terms": {
+      "category": [
+        {
+          "ID": 4,
+          "name": "Blog",
+          "slug": "blog",
+          "description": "",
+          "taxonomy": "category",
+          "parent": null,
+          "count": 2,
+          "link": "http:\/\/atheistchildrensbooks.org\/wordpress\/category\/blog\/",
+          "meta": {
+            "links": {
+              "collection": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/taxonomies\/category\/terms",
+              "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/taxonomies\/category\/terms\/4"
+            }
+          }
+        },
+        {
+          "ID": 3,
+          "name": "Reviews",
+          "slug": "reviews",
+          "description": "",
+          "taxonomy": "category",
+          "parent": null,
+          "count": 1,
+          "link": "http:\/\/atheistchildrensbooks.org\/wordpress\/category\/reviews\/",
+          "meta": {
+            "links": {
+              "collection": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/taxonomies\/category\/terms",
+              "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/taxonomies\/category\/terms\/3"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "ID": 1,
+    "title": "Hello world!",
+    "status": "publish",
+    "type": "post",
+    "author": {
+      "ID": 1,
+      "username": "atheistchildrensbooks",
+      "name": "atheistchildrensbooks",
+      "first_name": "",
+      "last_name": "",
+      "nickname": "atheistchildrensbooks",
+      "slug": "atheistchildrensbooks",
+      "URL": "",
+      "avatar": "",
+      "description": "",
+      "registered": "2015-06-17T19:09:25+00:00",
+      "meta": {
+        "links": {
+          "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/users\/1",
+          "archives": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/users\/1\/posts"
+        }
+      }
+    },
+    "content": "<p>If you&#8217;re reading this then your eye sockets are in no need of repair. Atheist Children&#8217;s Books is online and slowly getting online and ready to showcase books, graphic novels, sciencey stuff rammed with\u00a0fantastic stories and illustrations.<\/p>\n<p>Why should anyone care?<\/p>\n<p>Just like today&#8217;s companies, which employ immoral marketing strategies to influence and exploit the\u00a0uninitated in order to increase their consumer base and therefore their profits, so too,\u00a0religious institutions know that\u00a0their best chance of survival in an increasingly evidence-based and sceptical society is to attempt to teach their false\u00a0brand of reality to the ones they think will believe it the most, the ones they believe don&#8217;t have the experience to ask questions and challenge their version of how the world works &#8211; kids.<\/p>\n<p>Okay, let&#8217;s servce up the most famous one used to confuse\u00a0countless generations of anklebiters down the centuries on just about every continent: the &#8216;you&#8217;re created by a supernatural being with magic powers who can control the physical world and create miracles&#8217;. Cue Zeus here, friends &#8211; the maniacal, lightning-wielding ruler of the Greek heavens. Or the God of Moses, Muhammed, . These guys sat on their heavenly thrones or deck chairs or whatever they used to relax in their holy abodes, and looked from on high down on us poor monkeys scrambling around, trying to grow food, keep warm, avoid being poked with knives and all the regular things people have been doing for ages. And while we&#8217;re getting abot our business, as if life isn&#8217;t hard enough.<\/p>\n<p>Many times no one questioned the authority of the priests and mullahs and other self-ordained ministers of religions, because, to put it bluntly, we didn&#8217;t know better. We had no clue that the earth moved in orbit around the sun, or that the universe started with a Big Bang 13.5 billion years ago, or that some dinosaurs had feathers.<\/p>\n<p>Today it&#8217;s different, but the old stories remain. Despite all the awesome knowledge we&#8217;regathering about the universe, about our planet and about ourselves and our fellow creatures, some people still believe the world is not older than 10,000 years. T-rex says no! That&#8217;s less time that it took for our brains to evolve the joke in order for us to make fun of this stuff.<\/p>\n<p>Where then do we get our morals? From the internet? From the news? The truth that&#8217;s most often ignored is that morals come from us. We decide what&#8217;s right and wrong, it&#8217;s only that sometimes we&#8217;re ashamed of what our fellow creatures do so it&#8217;s only natural that we want to disown their behaviour as\u00a0stemming from the same biological and thought processes as our own. However the responsibility to act, to feel empathy, to help others is one we must share, and we have to take ownership, however meek and unevolved, of our own destinies rather than rely on the deity in the sky to pass them down to us. Let&#8217;s turn to the philosophers, the poets, the scientists &#8211; the people who have channelled human thought and tried to make sense of it for us.\u00a0Let&#8217;s revel in the details, look into the telescope and into the microscope. And, most importantly, let&#8217;s read more books!<\/p>\n<p>So the purpose you see of this site isn&#8217;t just to<\/p>\n<p>Anyway, ranter gotta rant. The good news is that there&#8217;s more crazy and beautiful stuff out there, probably right outside in your street than we humans can make up. Hey, out my window I can see two pidgeons \u00a0kissing! I wonder why they do that&#8230; I might just google that and find out!<\/p>\n<p>Stay tuned.. or as they say in pidgeon&#8230; Brrr brrr!<\/p>\n<p>&nbsp;<\/p>\n",
+    "parent": null,
+    "link": "http:\/\/atheistchildrensbooks.org\/wordpress\/hello-world\/",
+    "date": "2015-06-17T19:09:25",
+    "modified": "2015-07-11T21:23:13",
+    "format": "standard",
+    "slug": "hello-world",
+    "guid": "http:\/\/www.atheistchildrensbooks.org\/wordpress\/?p=1",
+    "excerpt": "<p>If you&#8217;re reading this then your eye sockets are in no need of repair. Atheist Children&#8217;s Books is online and slowly getting online and ready to showcase books, graphic novels, sciencey stuff rammed with\u00a0fantastic stories and illustrations. Why should anyone care? Just like today&#8217;s companies, which employ immoral marketing strategies to influence and exploit the\u00a0uninitated &hellip; <a href=\"http:\/\/atheistchildrensbooks.org\/wordpress\/hello-world\/\" class=\"more-link\">Continue reading <span class=\"screen-reader-text\">Hello world!<\/span><\/a><\/p>\n",
+    "menu_order": 0,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "date_tz": "UTC",
+    "date_gmt": "2015-06-17T19:09:25",
+    "modified_tz": "UTC",
+    "modified_gmt": "2015-07-11T21:23:13",
+    "meta": {
+      "links": {
+        "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/posts\/1",
+        "author": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/users\/1",
+        "collection": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/posts",
+        "replies": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/posts\/1\/comments",
+        "version-history": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/posts\/1\/revisions"
+      }
+    },
+    "featured_image": null,
+    "terms": {
+      "category": [
+        {
+          "ID": 4,
+          "name": "Blog",
+          "slug": "blog",
+          "description": "",
+          "taxonomy": "category",
+          "parent": null,
+          "count": 2,
+          "link": "http:\/\/atheistchildrensbooks.org\/wordpress\/category\/blog\/",
+          "meta": {
+            "links": {
+              "collection": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/taxonomies\/category\/terms",
+              "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/taxonomies\/category\/terms\/4"
+            }
+          }
+        },
+        {
+          "ID": 1,
+          "name": "News",
+          "slug": "news",
+          "description": "",
+          "taxonomy": "category",
+          "parent": null,
+          "count": 1,
+          "link": "http:\/\/atheistchildrensbooks.org\/wordpress\/category\/news\/",
+          "meta": {
+            "links": {
+              "collection": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/taxonomies\/category\/terms",
+              "self": "http:\/\/atheistchildrensbooks.org\/wordpress\/wp-json\/taxonomies\/category\/terms\/1"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,33 +1,55 @@
 .stage.blog {
 
-  background-color: #EBF1FF;
-  color:white;
+  background-color: #ebf1ff;
+  color:black;
 
   .mountains {
     background: url(/img/mountains.png) repeat-x top left;
     position: absolute;
-    top:-125px;
+    bottom: 0;
     z-index: 0;
     height:400px;
     left: 0;
     width:130%;
-    .lh-transition(top .3s ease-in);
-    @media (min-width: @screen-md-min) {
-      top:-50px;
-    }
   }
 
-  .content-layer-1,
-  .content-layer-2 ,
+  .mountain-trees {
+    background: url(/img/mountain-trees.png) repeat-x top left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    height: 320px;
+    width: 130%;
+  }
+
+
+  .content-layer-2 {
+  position: relative;
+  min-height: 400px;
+  background-color: #082056;
+}
+
+
   .content-layer-3 {
     padding-bottom: 0;
+    background-color:#429B92;
+  }
+
+  footer {
+    background-color:#429B92;
   }
 
   .content-layer-1  {
-    .container-fluid {
-      background-color:#082056
+    padding-bottom: 225px;
+    padding-top: 100px;
+    @media (min-width: @screen-md-min) {
+      padding-top: 200px;
     }
-    .row {
+    .container-wrapper {
+      padding-bottom: 75px;
+    }
+    .container {
       z-index: 2;
       position:relative;
     }

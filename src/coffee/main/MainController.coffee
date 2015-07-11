@@ -5,8 +5,8 @@ angular.module('acb')
   'ResizerFactory'
   'LoaderFactory'
   '$timeout'
-  ($scope, ResizerFactory, LoaderFactory, $timeout)->
-
+  '$window'
+  ($scope, ResizerFactory, LoaderFactory, $timeout, $window)->
     $scope.navigation = [
       {
         url : '/'
@@ -30,17 +30,11 @@ angular.module('acb')
       }
     ]
 
-
-
-
     $scope.isMenuOpen = false
-
     $scope.toggleNavigation = ->
       $scope.isMenuOpen = !$scope.isMenuOpen
-
     $scope.closeNavigation = ->
       $scope.isMenuOpen = false
-
     ResizerFactory.add $scope.closeNavigation
 
     finishLoading = ->
@@ -50,7 +44,9 @@ angular.module('acb')
         $scope.showSiteHeader = true
         $timeout ()->
           $scope.isPageLoaded = true
-          $scope.isModalBoxOpen = true
+          if !$window.sessionStorage.modalOpened
+            $scope.isModalBoxOpen = true
+            $window.sessionStorage.modalOpened = true
           return
         , 1250
         return

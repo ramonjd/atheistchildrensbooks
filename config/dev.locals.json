@@ -26,6 +26,7 @@
       ".tmp/js/ReadController.js",
       ".tmp/js/PageController.js",
       ".tmp/js/BlogController.js",
+      ".tmp/js/BlogPageController.js",
       ".tmp/js/AboutController.js",
       ".tmp/js/guessAGodDirective.js",
       ".tmp/js/modalBoxDirective.js",

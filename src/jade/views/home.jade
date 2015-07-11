@@ -1,68 +1,69 @@
 main#main.view-animate-container
   section.content-layer-1
-    div.container-fluid
-      h1 Latest books and reviews
-      h2 Athiest Children's Books is currently in development!
-      div.row
-        div.col-md-6
-          div.content-cell.media
-            div.media-left
-              a(href='/read/sweet-book')
-                img.img-rounded.media-object(src='/img/book-cover.png', alt='')
-            div.media-body
+    div.container-wrapper
+      div.container
+        h1 Latest books and reviews
+        h2 Athiest Children's Books is currently in development!
+        div.row
+          div.col-md-6
+            div.content-cell.media
+              div.media-left
+                a(href='/read/sweet-book')
+                  img.img-rounded.media-object(src='/img/book-cover.png', alt='')
+              div.media-body
+                span.age.label.label-info 4-8 years
+                h2 A neat book review goes here
+                p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
+          div.col-md-6
+            div.content-cell.media
+              div.media-left
+                a(href='/read/awesome-book')
+                  img.img-rounded.media-object(src='/img/book-cover.png', alt='')
+              div.media-body
+                span.age.label.label-info 4-8 years
+                h2 A neat book review goes here
+                p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
+        div.row
+          div.col-sm-6.col-md-3.col-xs-12.book
+            a(href='/read/some-title-here')
               span.age.label.label-info 4-8 years
-              h2 A neat book review goes here
-              p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
-        div.col-md-6
-          div.content-cell.media
-            div.media-left
-              a(href='/read/awesome-book')
-                img.img-rounded.media-object(src='/img/book-cover.png', alt='')
-            div.media-body
+              figure
+                div
+                  img.img-rounded(src='/img/book-cover.png', alt='')
+                figcaption
+                  div
+                    h3 My awesome book
+                    span Your name here
+          div.col-sm-6.col-md-3.col-xs-12.book
+            a(href='/read/other-title')
               span.age.label.label-info 4-8 years
-              h2 A neat book review goes here
-              p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
-      div.row
-        div.col-sm-6.col-md-3.col-xs-12.book
-          a(href='/read/some-title-here')
-            span.age.label.label-info 4-8 years
-            figure
-              div
-                img.img-rounded(src='/img/book-cover.png', alt='')
-              figcaption
+              figure
                 div
-                  h3 My awesome book
-                  span Your name here
-        div.col-sm-6.col-md-3.col-xs-12.book
-          a(href='/read/other-title')
-            span.age.label.label-info 4-8 years
-            figure
-              div
-                img.img-rounded(src='/img/book-cover.png', alt='')
-              figcaption
+                  img.img-rounded(src='/img/book-cover.png', alt='')
+                figcaption
+                  div
+                    h3.clearfix My awesome book
+                    span Your name here
+          div.col-sm-6.col-md-3.col-xs-12.book
+            a(href='/read/this-book-is-great')
+              span.age.label.label-info 4-8 years
+              figure
                 div
-                  h3.clearfix My awesome book
-                  span Your name here
-        div.col-sm-6.col-md-3.col-xs-12.book
-          a(href='/read/this-book-is-great')
-            span.age.label.label-info 4-8 years
-            figure
-              div
-                img.img-rounded(src='/img/book-cover.png', alt='')
-              figcaption
+                  img.img-rounded(src='/img/book-cover.png', alt='')
+                figcaption
+                  div
+                    h3 My awesome book
+                    span Your name here
+          div.col-sm-6.col-md-3.col-xs-12.book
+            a(href='/read/what-a-spiffing-book')
+              span.age.label.label-info 4-8 years
+              figure
                 div
-                  h3 My awesome book
-                  span Your name here
-        div.col-sm-6.col-md-3.col-xs-12.book
-          a(href='/read/what-a-spiffing-book')
-            span.age.label.label-info 4-8 years
-            figure
-              div
-                img.img-rounded(src='/img/book-cover.png', alt='')
-              figcaption
-                div
-                  h3 My awesome book
-                  span Your name here
+                  img.img-rounded(src='/img/book-cover.png', alt='')
+                figcaption
+                  div
+                    h3 My awesome book
+                    span Your name here
       div.cow
       div.tree-lg
         img(src='/img/tree-lg.png', alt='tree')
@@ -76,7 +77,7 @@ main#main.view-animate-container
       div.guess-a-god(guess-a-god='')
   hr.crust
   section.stratum.content-layer-3
-    div.container-fluid
+    div.container
       div.row
         div.col-md-9
           h2 Questions and (some) answers

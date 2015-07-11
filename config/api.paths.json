@@ -3,5 +3,7 @@
   "home" : "/wordpress/wp-json/pages/home",
   "about" : "/wordpress/wp-json/pages/about",
   "posts" : "/wordpress/wp-json/posts/",
+  "bookPosts" : "/wordpress/wp-json/posts?category_name=books",
+  "blogPosts" : "/wordpress/wp-json/posts?category_name=blog",
   "contact" : "/wordpress/wp-json/pages/contact"
 }
