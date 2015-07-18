@@ -6,7 +6,6 @@ Please support atheistchildrensbooks.org!
 
 
 - react
-https://www.codementor.io/reactjs/tutorial/react-js-flux-architecture-tutorial
 
 - home page
 promo book covers (different cover sizes)
@@ -27,3 +26,5 @@ https://github.com/nzakas/understandinges6/blob/master/manuscript/03-Objects.md
 - dev
 https://github.com/johnpapa/angular-styleguide#named-vs-anonymous-functions
 
+
+http://kenwheeler.github.io/slick/

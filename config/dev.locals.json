@@ -2,6 +2,7 @@
   "vendor" : [
     "bower_components/jquery/dist/jquery.js",
     "bower_components/velocity/velocity.js",
+    "bower_components/slick.js/slick/slick.js",
     "bower_components/angular/angular.js",
     "bower_components/angular-route/angular-route.js",
     "bower_components/angular-sanitize/angular-sanitize.js"
@@ -30,6 +31,7 @@
       ".tmp/js/AboutController.js",
       ".tmp/js/guessAGodDirective.js",
       ".tmp/js/modalBoxDirective.js",
+      ".tmp/js/carouselDirective.js",
       ".tmp/js/SiteHeaderDirective.js",
       ".tmp/js/fishSchoolDirective.js"
     ]
