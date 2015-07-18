@@ -62,16 +62,16 @@
       height:100%;
       min-height:200px;
       padding:20px;
-
     }
     &.slick-center {
+      position: relative;
+      z-index:100;
       .slide-wrapper {
         border:10px solid black;
         background: rgba(255, 255, 255, 1);
         .lh-transform(scale(1));
         @media (min-width: @screen-sm-min) {
           .lh-transform(scale(1.2));
-
         }
       }
     }
@@ -138,4 +138,13 @@
 .slick-active button:before {
   opacity: .75;
   color: black;
+}
+
+.book-slide {
+  img {
+    width: 100%;
+  }
+  @media (min-width: @screen-sm-min) {
+    .lh-transform(scale(1.2));
+  }
 }
