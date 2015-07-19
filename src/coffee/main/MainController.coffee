@@ -9,11 +9,6 @@ angular.module('acb')
   ($scope, ResizerFactory, LoaderFactory, $timeout, $window)->
     $scope.navigation = [
       {
-        url : '/'
-        text : 'Home'
-        id : 'home'
-      }
-      {
         url : '/read'
         text : 'Read'
         id : 'read'

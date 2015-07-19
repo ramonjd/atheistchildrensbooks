@@ -10,22 +10,15 @@ angular.module('acb')
       $('.carousel').slick {
         dots: true,
         speed: 750,
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        #slidesToShow: 1,
+        variableWidth: true,
         #autoplay: true,
         #autoplaySpeed: 2000,
-        centerMode: true,
-        adaptiveHeight: true,
+        #centerMode: true,
+        #variableWidth: true,
+        #adaptiveHeight: true,
         focusOnSelect: true,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
+        infinite: true
       }
     }
 ]

@@ -1,70 +1,33 @@
 main#main.view-animate-container
     section.content-layer-1
         .container-wrapper
-            carousel
             .container
-                h1 Latest books and reviews
-                h2 Athiest Children's Books is currently in development!
                 .row
-                    .col-md-6
-                        .content-cell.media
-                            .media-left
-                                a(href='/read/sweet-book')
-                                    img.img-rounded.media-object(src='/img/book-cover.png', alt='')
-                            .media-body
-                                span.age.label.label-info 4-8 years
-                                h2 A neat book review goes here
-                                p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
-                    .col-md-6
-                        .content-cell.media
-                            .media-left
-                                a(href='/read/awesome-book')
-                                    img.img-rounded.media-object(src='/img/book-cover.png', alt='')
-                            .media-body
-                                span.age.label.label-info 4-8 years
-                                h2 A neat book review goes here
-                                p Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
+                    .col-md-4
+                        .promo(style='height:60px;width:100%')
+                            h2 Fiction
+                    .col-md-4
+                        .promo(style='height:60px;width:100%')
+                            h2 Non-Fiction
+                    .col-md-4
+                        .promo(style='height:60px;width:100%')
+                            h2 By Age
                 .row
-                    .col-sm-6.col-md-3.col-xs-12.book
-                        a(href='/read/some-title-here')
-                            span.age.label.label-info 4-8 years
-                            figure
-                                div
-                                    img.img-rounded(src='/img/book-cover.png', alt='')
-                                figcaption
-                                    div
-                                        h3 My awesome book
-                                        span Your name here
-                    .col-sm-6.col-md-3.col-xs-12.book
-                        a(href='/read/other-title')
-                            span.age.label.label-info 4-8 years
-                            figure
-                                div
-                                    img.img-rounded(src='/img/book-cover.png', alt='')
-                                figcaption
-                                    div
-                                        h3.clearfix My awesome book
-                                        span Your name here
-                    .col-sm-6.col-md-3.col-xs-12.book
-                        a(href='/read/this-book-is-great')
-                            span.age.label.label-info 4-8 years
-                            figure
-                                div
-                                    img.img-rounded(src='/img/book-cover.png', alt='')
-                                figcaption
-                                    div
-                                        h3 My awesome book
-                                        span Your name here
-                    .col-sm-6.col-md-3.col-xs-12.book
-                        a(href='/read/what-a-spiffing-book')
-                            span.age.label.label-info 4-8 years
-                            figure
-                                div
-                                    img.img-rounded(src='/img/book-cover.png', alt='')
-                                figcaption
-                                    div
-                                        h3 My awesome book
-                                        span Your name here
+                    .col-md-8
+                        .promo
+                            img.img-responsive(src='/img/book-cover.png', alt='', style='height:300px;width:100%;')
+                    .col-md-4
+                        .row
+                            .col-xs-6.col-md-12
+                                .promo
+                                    img.img-responsive(src='/img/book-cover.png', alt='', style='height:140px;width:100%;')
+                            .col-xs-6.col-md-12
+                                .promo
+                                    img.img-responsive(src='/img/book-cover.png', alt='', style='height:140px;width:100%')
+
+                .row
+                    .col-md-12
+                        carousel
             .cow
             .tree-lg
                 img(src='/img/tree-lg.png', alt='tree')
