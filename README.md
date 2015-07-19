@@ -26,5 +26,7 @@ https://github.com/nzakas/understandinges6/blob/master/manuscript/03-Objects.md
 - dev
 https://github.com/johnpapa/angular-styleguide#named-vs-anonymous-functions
 
+- effects
+http://ianlunn.github.io/Hover/
 
 http://kenwheeler.github.io/slick/

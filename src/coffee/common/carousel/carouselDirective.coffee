@@ -9,7 +9,7 @@ angular.module('acb')
     link : (scope, element, attrs)->
       $('.carousel').slick {
         dots: true,
-        speed: 300,
+        speed: 750,
         slidesToShow: 3,
         slidesToScroll: 1,
         #autoplay: true,

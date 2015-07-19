@@ -1,6 +1,20 @@
+body {
+  &:before {
+    height:100%;
+    width:100%;
+    position:fixed;
+    background:white;
+    z-index:1;
+  }
+}
+
 body.loaded {
   overflow: auto;
   overflow-x:hidden;
+  &:before {
+    display: none;
+  }
+
   .loading {
     display:none;
   }
@@ -21,8 +35,9 @@ body.loaded {
   left:0;
   z-index:100;
   opacity:1;
-  .lh-transition(all .5s ease-out);
+  z-index:100;
   &.loaded {
+    .lh-transition(all .5s ease-out);
     section {
       .lh-transform(scale(0));
     }
