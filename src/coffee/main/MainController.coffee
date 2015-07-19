@@ -25,6 +25,29 @@ angular.module('acb')
       }
     ]
 
+    $scope.footerNavigation = [
+      {
+        url : '/home'
+        text : 'Home'
+        id : 'home'
+      }
+      {
+        url : '/read'
+        text : 'Read'
+        id : 'read'
+      }
+      {
+        url : '/about'
+        text : 'About'
+        id : 'about'
+      }
+      {
+        url : '/blog'
+        text : 'Blog'
+        id : 'blog'
+      }
+    ]
+
     $scope.isMenuOpen = false
     $scope.toggleNavigation = ->
       $scope.isMenuOpen = !$scope.isMenuOpen

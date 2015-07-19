@@ -30,7 +30,7 @@ header {
     font-weight: 700;
     @media (min-width: @screen-md-min) {
       opacity: 1;
-      font-size: 1.4rem;
+      font-size: 1.1rem;
     }
     ul {
       padding:0;
@@ -38,9 +38,12 @@ header {
     }
     li {
       list-style: none;
-      display: inline-block;
+      display: block;
       position:relative;
       margin-left:20px;
+      @media (min-width: @screen-md-min) {
+        display: inline-block;
+      }
     }
     a {
       color: black;

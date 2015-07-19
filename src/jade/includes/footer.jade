@@ -16,5 +16,5 @@ footer.container-fluid
         ul.nav.nav-pills
           li &copy; Atheist Children's Books
               span &nbsp; #{new Date().getFullYear()}
-          li(role='presentation', ng-repeat='item in navigation track by item.id', ng-class='{active : item.id === pageId}')
+          li(role='presentation', ng-repeat='item in footerNavigation track by item.id')
             a(ng-href='{{item.url}}', ng-click='closeNavigation()') {{item.text}}
